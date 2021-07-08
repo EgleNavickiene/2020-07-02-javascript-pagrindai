@@ -344,14 +344,14 @@ jQuery(Xduomenys).each(function (indeksas, reiksme) {
 
     // pirmoko masyvas:
 
-    let pirmokoLent = [
+    const imones = [
         {
             Klientas: "Adomavičiaus įmonė ",
             Kodas: "1000 ",
             Data: "2020.06.20 ",
             Produktas: "Nešiojamas  kompiuteris ",
             Kaina: "1449 ",
-            Papildoma_info: "Dėklas - dovanų "
+            Papildoma_info: "Dėklas - dovanų ",
         },
         {
             Klientas: 'UAB "Kesko senukai" ',
@@ -359,7 +359,7 @@ jQuery(Xduomenys).each(function (indeksas, reiksme) {
             Data: "2020.06.21 ",
             Produktas: "Televizorius ",
             Kaina: "1449 ",
-            Papildoma_info: "Reikalingas pristatymas "
+            Papildoma_info: "Reikalingas pristatymas ",
         },
         {
             Klientas: 'UAB "Simplea" ',
@@ -367,7 +367,7 @@ jQuery(Xduomenys).each(function (indeksas, reiksme) {
             Data: "2020.06.22 ",
             Produktas: "Telefonas ",
             Kaina: "299 ",
-            Papildoma_info: "Garantija 3 metai "
+            Papildoma_info: "Garantija 3 metai ",
         },
         {
             Klientas: 'UAB "5 kontinentai" ',
@@ -375,7 +375,26 @@ jQuery(Xduomenys).each(function (indeksas, reiksme) {
             Data: "2020.06.23 ",
             Produktas: "Planšetė ",
             Kaina: "450 ",
-            Papildoma_info: "Pratęsta garantija "
+            Papildoma_info: "Pratęsta garantija ",
         },
     ];
+
+    var tablebody = $("#pirmokoVidus tbody"),
+    values = [
+      "Klientas",
+      "Kodas",
+      "Data",
+      "Produktas",
+      "Kaina",
+      "Papildoma_info",
+    ];
+
+  jQuery(imones).each(function (i, r) {
+    var tablerow = jQuery("<tr>");
+    jQuery(values).each(function (i, k) {
+      jQuery("<td>").html(r[k]).appendTo(tablerow);
+    });
+    tablebody.append(tablerow);
+  });
+
 
