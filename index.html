@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testine Javascript aplikacija</title>
+    <link rel="stylesheet" href="assets/css/custom.css" />
+</head>
+<body>
+    <div id="messages_order"></div>
+    <input type="number" id="kiekis" value="1" />
+    <button id="kvietejas">Į krepšelį</button>
+
+    <button id="reset">Atnaujinti</button>
+    
+    <div class="skaiciuokles">
+      <div></div>
+      <button id="skaiciuoti">Skaičiuoti</button>
+      <div id="total"></div>
+    </div>
+
+    <!-- lentele -->
+<div>
+  <h2>Lentelė</h2>
+</div>
+
+<div>
+  <button id="rodyti">Rodyti lentelę</button>
+</div>
+
+    <table class="lentele" id="lentele">
+      <thead>
+        <th>Miestas</th>
+        <th>Adresas</th>
+        <th>Data</th>
+        <th>Kiekis</th>
+      </thead>
+      <tbody id="lentelesVidus"></tbody>
+    </table>
+
+    <!-- Pasirinkimas (automobiliai)  -->
+    <div>
+      <h2>Automobiliai</h2>
+    </div>
+   
+  <select id="pasirinkimas">
+		<option value="volvo">Volvo</option>
+		<option value="saab">Saab</option>
+		<option value="opel">Opel</option>
+		<option value="audi">Audi</option>
+    <option value="dviratis">Dviratis</option>
+	  </select>
+
+    <button class="submit" id="submit">Submit</button>
+
+    <div class="atsakymoZinute" id="atsakymoZinute"></div>
+    
+    <div>
+      <button class="naujasmygtukas" id="naujasmygtukas">Uždėti klasę</button>
+    </div>
+
+    <div>
+      <button class="kitasmygtukas" id="kitasmygtukas">Nuimti klasę</button>
+    </div>
+
+    <div>
+      <h2>Integruotas</h2>
+    </div> 
+
+    <a href="#" class="integruotaNuoroda">
+      <h4 id="#elementasIntegracijai">Paspausk</h4>
+    </a>
+   
+<!-- w3schools pvz -->
+<hr>
+
+<p>If you click on me, I will disappear.</p>
+<p>Click me away!</p>
+<p>Click me too!</p>
+<hr>
+
+
+
+
+    
+
+    <!-- scriptai -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/custom.js"></script>
+    <script type="text/javascript" src="assets/js/newfile.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,56 @@
+.skaiciuokles {
+    margin: 20px 0;
+}
+
+.lentele {
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-top: 2rem;
+    border-collapse: collapse;
+    display: none;
+}
+
+.lentele.show {
+    display: table;
+}
+
+.lentele th {
+    font-weight: 600;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    text-align: left;
+    padding: 0.5rem;
+}
+
+.lentele td {
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    text-align: left;
+    padding: 0.5rem;
+}
+
+.lentele th:last-child,
+.lentele td:last-child {
+    border-right: none;
+}
+
+.atsakymoZinute {
+    margin: 20px 0px;
+}
+
+.naujasmygtukas {
+    margin: 20px 0px;
+    color:white;
+    background-color: blue;
+    transition: all 1000ms ease-in-out;
+}
+
+.klase {
+    color:red;
+    background-color: yellow;    
+}
+
+.integruotaNuoroda {
+    font-weight: 700;
+    display: block;
+}
