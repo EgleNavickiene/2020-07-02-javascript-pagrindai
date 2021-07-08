@@ -128,6 +128,8 @@ const duomenys = [
     }
 ];
 
+duomenys[2]['miestas']='Jonava';
+
 
 let html = '';
 let ending = '';
@@ -146,7 +148,7 @@ for(let indeksas in duomenys) {
 
     //----------jQuery test
 
-  /*jQuery(document).ready(function() {
+  jQuery(document).ready(function() {
  
         jQuery(duomenys).each(function(indeksas, reiksme){
        
@@ -156,7 +158,7 @@ for(let indeksas in duomenys) {
           
         });
        
-      });*/
+      });
 
 //--------------
 
@@ -165,6 +167,8 @@ for(let indeksas in duomenys) {
 }
 
 document.getElementById('lentelesVidus').innerHTML = html;
+
+
 
 
 
@@ -286,6 +290,92 @@ $(document).ready(function(){
     });
   });
 
+// --kita lentelė
 
+const Xduomenys = [
+    {
+        mokinys: "Jonas",
+        klase: "3b",
+        pamoka: "matematika",
+        lygis: "A"
+    },
+    {
+        mokinys: "Milda",
+        klase: "3a",
+        pamoka: "biologija",
+        lygis: "B"
+    },
+    {
+        mokinys: "Silvija",
+        klase: "3b",
+        pamoka: "istotija",
+        lygis: "A"
+    }
+];
 
+/*let html2 = '';
+let ending2 = '';
+
+for(let Xindeksas in Xduomenys) {
+
+    html2 += '<tr>'; 
+
+    for(let Xindeksas2 in Xduomenys[Xindeksas]) {
+        
+        html2 += '<td>' + Xduomenys[Xindeksas][Xindeksas2] + '</td>';
+
+    };
+
+    html2 += '</tr>';
+}
+
+document.getElementById('XlentelesVidus').innerHTML = html2;*/
+
+var tbody = $("XlentelesVidus tbody");
+reiksmes = ['mokinys', 'klase', 'pamoka', 'lygis'];
+
+jQuery(Xduomenys).each(function (indeksas, reiksme) {
+    var tr = jQuery("<tr>");
+    jQuery(reiksmes).each(function(indeksas, kintamasis) {
+        jQuery("<td>").html(reiksme[kintamasis]).appendTo(tr);
+        });
+        tbody.append(tr);
+    });
+
+    // pirmoko masyvas:
+
+    let pirmokoLent = [
+        {
+            Klientas: "Adomavičiaus įmonė ",
+            Kodas: "1000 ",
+            Data: "2020.06.20 ",
+            Produktas: "Nešiojamas  kompiuteris ",
+            Kaina: "1449 ",
+            Papildoma_info: "Dėklas - dovanų "
+        },
+        {
+            Klientas: 'UAB "Kesko senukai" ',
+            Kodas: "1001 ",
+            Data: "2020.06.21 ",
+            Produktas: "Televizorius ",
+            Kaina: "1449 ",
+            Papildoma_info: "Reikalingas pristatymas "
+        },
+        {
+            Klientas: 'UAB "Simplea" ',
+            Kodas: "1002 ",
+            Data: "2020.06.22 ",
+            Produktas: "Telefonas ",
+            Kaina: "299 ",
+            Papildoma_info: "Garantija 3 metai "
+        },
+        {
+            Klientas: 'UAB "5 kontinentai" ',
+            Kodas: "1003 ",
+            Data: "2020.06.23 ",
+            Produktas: "Planšetė ",
+            Kaina: "450 ",
+            Papildoma_info: "Pratęsta garantija "
+        },
+    ];
 

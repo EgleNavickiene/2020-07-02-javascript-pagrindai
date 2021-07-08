@@ -10,11 +10,18 @@
     display: none;
 }
 
+.Xlentele {
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-top: 2rem;
+    border-collapse: collapse;
+}
+
 .lentele.show {
     display: table;
 }
 
-.lentele th {
+.lentele th, .Xlentele th {
     font-weight: 600;
     border-bottom: 1px solid #ccc;
     border-right: 1px solid #ccc;
@@ -22,7 +29,7 @@
     padding: 0.5rem;
 }
 
-.lentele td {
+.lentele td, .Xlentele td {
     border-bottom: 1px solid #ccc;
     border-right: 1px solid #ccc;
     text-align: left;
@@ -30,7 +37,9 @@
 }
 
 .lentele th:last-child,
-.lentele td:last-child {
+.lentele td:last-child, 
+.Xlentele th:last-child,
+.Xlentele td:last-child {
     border-right: none;
 }
 
@@ -53,4 +62,18 @@
 .integruotaNuoroda {
     font-weight: 700;
     display: block;
+}
+
+/* 1klases lentele */
+
+.pirmoko td, .pirmoko th {
+    border-style: solid;
+    border-color: blue;
+    border-width: 1px;
+    padding: 10px;
+}
+
+.pirmoko th {
+    font-weight: 700;
+    color: darkblue;
 }
