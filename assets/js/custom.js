@@ -153,7 +153,7 @@ for(let indeksas in duomenys) {
         jQuery(duomenys).each(function(indeksas, reiksme){
        
           jQuery(reiksme).each(function(indeksas, reiksme) {
-            console.log(reiksme['miestas']);
+           // console.log(reiksme['miestas']);
           });
           
         });
@@ -250,7 +250,6 @@ document.getElementById('submit').onclick = function() {
 
         default:
             tekstas = 'Velniop tą mašiną';
-
     }
 
     //document.getElementById('atsakymoZinute').innerText = tekstas;
@@ -290,7 +289,7 @@ $(document).ready(function(){
     });
   });
 
-// --kita lentelė
+// --X lentelė
 
 const Xduomenys = [
     {
@@ -313,7 +312,7 @@ const Xduomenys = [
     }
 ];
 
-/*let html2 = '';
+let html2 = '';
 let ending2 = '';
 
 for(let Xindeksas in Xduomenys) {
@@ -323,15 +322,14 @@ for(let Xindeksas in Xduomenys) {
     for(let Xindeksas2 in Xduomenys[Xindeksas]) {
         
         html2 += '<td>' + Xduomenys[Xindeksas][Xindeksas2] + '</td>';
-
     };
 
     html2 += '</tr>';
-}
+};
 
-document.getElementById('XlentelesVidus').innerHTML = html2;*/
+document.getElementById('XlentelesVidus').innerHTML = html2;
 
-var tbody = $("XlentelesVidus tbody");
+/*var tbody = $("XlentelesVidus tbody");
 reiksmes = ['mokinys', 'klase', 'pamoka', 'lygis'];
 
 jQuery(Xduomenys).each(function (indeksas, reiksme) {
@@ -340,16 +338,17 @@ jQuery(Xduomenys).each(function (indeksas, reiksme) {
         jQuery("<td>").html(reiksme[kintamasis]).appendTo(tr);
         });
         tbody.append(tr);
-    });
+    });*/
 
     // pirmoko masyvas:
 
-    const imones = [
+    var imones = [
+
         {
             Klientas: "Adomavičiaus įmonė ",
             Kodas: "1000 ",
             Data: "2020.06.20 ",
-            Produktas: "Nešiojamas  kompiuteris ",
+            Produktas: "Nešiojamas kompiuteris ",
             Kaina: "1449 ",
             Papildoma_info: "Dėklas - dovanų ",
         },
@@ -379,22 +378,43 @@ jQuery(Xduomenys).each(function (indeksas, reiksme) {
         },
     ];
 
-    var tablebody = $("#pirmokoVidus tbody"),
-    values = [
-      "Klientas",
-      "Kodas",
-      "Data",
-      "Produktas",
-      "Kaina",
-      "Papildoma_info",
-    ];
+    var tablebody = $("#PlentelesVidus tbody");
 
-  jQuery(imones).each(function (i, r) {
-    var tablerow = jQuery("<tr>");
-    jQuery(values).each(function (i, k) {
-      jQuery("<td>").html(r[k]).appendTo(tablerow);
+    jQuery(imones).each(function (i, r) {
+        var tablerow = jQuery("<tr>");
+        jQuery(values).each(function (i, k) {
+          jQuery("<td>").html(r[k]).appendTo(tablerow);
+        });
+        tablebody.append(tablerow);
+      });
+
+
+
+
+
+
+
+    /*
+    var tablebody = $("#PlentelesVidus tbody");
+
+
+    jQuery.each(imones, function (i, r) {
+        var tablerow = jQuery("<tr>");
+
+        jQuery.each(r, function (index, k) {
+            jQuery("<tr>").html(k).appendTo(tablerow);
+        });
     });
-    tablebody.append(tablerow);
-  });
+
+    let dinamineLentele = jQuery('table');
+
+    dinamineLentele.addClass('Plentele')*/
+
+
+  
+
+   
+    
+
 
 

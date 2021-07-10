@@ -66,14 +66,18 @@
 
 /* 1klases lentele */
 
-.pirmoko td, .pirmoko th {
+.Plentele  {
+    color: green;
+}
+
+.Plentele td, .Plentele th {
     border-style: solid;
     border-color: blue;
     border-width: 1px;
     padding: 10px;
 }
 
-.pirmoko th {
+.Plentele th {
     font-weight: 700;
     color: darkblue;
 }
