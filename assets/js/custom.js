@@ -283,11 +283,11 @@ $('.integruotaNuoroda').click(function() {
 });
 
 //----w3schools pvz.----------------
-$(document).ready(function(){
-    $("p").click(function(){
-      $(this).hide();
-    });
-  });
+// $(document).ready(function(){
+//     $("p").click(function(){
+//       $(this).hide();
+//     });
+//   });
 
 // --X lentelė
 
@@ -307,7 +307,7 @@ const Xduomenys = [
     {
         mokinys: "Silvija",
         klase: "3b",
-        pamoka: "istotija",
+        pamoka: "istorija",
         lygis: "A"
     }
 ];
@@ -388,12 +388,6 @@ jQuery(Xduomenys).each(function (indeksas, reiksme) {
         tablebody.append(tablerow);
       });
 
-
-
-
-
-
-
     /*
     var tablebody = $("#PlentelesVidus tbody");
 
@@ -409,6 +403,10 @@ jQuery(Xduomenys).each(function (indeksas, reiksme) {
     let dinamineLentele = jQuery('table');
 
     dinamineLentele.addClass('Plentele')*/
+
+// --------------------------------------------
+// 2021.07.15 uzduotys
+
 
 
   
