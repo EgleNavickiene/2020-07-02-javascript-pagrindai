@@ -25,17 +25,17 @@ function randomSkaicius(min, max) {
 document.getElementById("random-sk").innerHTML = 
 "3. Jei min - 3, max - 12, <br>Funkcija: random skaičius * (max - min + 1) + min <br> Koks tas \"random\" skaičius, jei gaunam " + randomSkaicius(min, max) + "?";
 
+// 4 uzd.
 let a ;
 let b ;
 
-// 4 uzd.
 a = randomSkaicius(0, 4);
 b = randomSkaicius(0, 4);
 
-if (a>0 ) {
-  document.getElementById("dalyba").innerHTML = "4. "+b +"/"+a +"=" + Math.floor(b/a);
-} else {   
-  document.getElementById("dalyba-negalima").innerHTML = "4. "+b +"/"+a +" Dalyba negalima";
+document.getElementById("dalyba").innerHTML = "4. "+b +"/"+a +"=" + Math.floor(b/a);
+
+if (a == 0 ) {    
+  document.getElementById("dalyba").innerHTML = "4. "+b +"/"+a +" Dalyba negalima";
 }
 
 
@@ -44,20 +44,82 @@ let x1 = randomSkaicius(0, 25);
 let x2 = randomSkaicius(0, 25);
 let x3 = randomSkaicius(0, 25);
 
+let masyvasIsTriju = [x1, x2, x3];
+
+let mediana = Math.max( 
+  Math.min( x1, x2 ), 
+  Math.min( Math.max( x1, x2), x3)
+);
+
+document.getElementById("penkta-uzd").innerHTML = '5. Pirmas: '+ 
+x1 +', antras: ' + x2 + ' trečias: ' + x3 + '. Mediana:' + mediana;
+
 
 // 6 uzd.
 c = (randomSkaicius(min, max)*10);
 document.getElementById("rodyt-random").innerHTML = "6. Random skaicius "+ c ;
 
 // 7 uzd.
-let neig = (randomSkaicius(-10, -1));
-let teig = (randomSkaicius(0, 10));
-let nuoIki1 = (randomSkaicius(neig, teig));
-let nuoIki2 = (randomSkaicius(neig, teig));
-let nuoIki3 = (randomSkaicius(neig, teig))
+const nuoIki1 = randomSkaicius(-10, 10);
+const nuoIki2 = randomSkaicius(-10, 10);
+const nuoIki3 = randomSkaicius(-10, 10);
 
-myArr = [nuoIki1, nuoIki2, nuoIki3];
+let nuoIki1_return = '';
+let nuoIki2_return = '';
+let nuoIki3_return = '';
 
+// 1 skaicius:
+if(nuoIki1 < 0) {
+  nuoIki1_return = '<span style="color:red;">' + nuoIki1 + '</span> ';
+}
 
-document.getElementById("trys-skaiciai").innerHTML = "7. "+ myArr;
+if(nuoIki1 == 0) {
+  nuoIki1_return = '<span style="color:blue;">' + nuoIki1 + '</span> ';
+}
 
+if(nuoIki1 > 0) {
+  nuoIki1_return = '<span style="color:green;">' + nuoIki1 + '</span> ';
+}
+
+// 2 skaicius:
+if(nuoIki2 < 0) {
+  nuoIki2_return = '<span style="color:red;">' + nuoIki2 + '</span> ';
+}
+
+if(nuoIki2 == 0) {
+  nuoIki2_return = '<span style="color:blue;">' + nuoIki2 + '</span> ';
+}
+
+if(nuoIki2 > 0) {
+  nuoIki2_return = '<span style="color:green;">' + nuoIki2 + '</span> ';
+}
+
+// 3 skaicius:
+if(nuoIki3 < 0) {
+  nuoIki3_return = '<span style="color:red;">' + nuoIki3 + '</span> ';
+}
+
+if(nuoIki3 == 0) {
+  nuoIki3_return = '<span style="color:blue;">' + nuoIki3 + '</span> ';
+}
+
+if(nuoIki3 > 0) {
+  nuoIki3_return = '<span style="color:green;">' + nuoIki3 + '</span> ';
+}
+
+document.getElementById('trys-skaiciai1').innerHTML = '<p>7. Trys skaičiai:'+'<br></br>' +' <strong>' + nuoIki1_return+'<br></br>'  + nuoIki2_return+'<br></br>' +nuoIki3_return + '</strong></p>';
+
+// 8 uzd.
+
+const zvakiu_kiekis = randomSkaicius(5, 3000);
+let nuolaida = 0;
+
+if(zvakiu_kiekis >= 1000) 
+    nuolaida = 3; 
+
+if(zvakiu_kiekis >= 2000) 
+    nuolaida = 4; 
+
+let suma = zvakiu_kiekis - ( (zvakiu_kiekis / 100) * nuolaida);
+
+document.getElementById('nuolaida').innerHTML += '<p>Pirkta žvakių: ' + zvakiu_kiekis + ' Suma: <strong>' + suma + ' € </strong> (nuolaida - '+nuolaida+'%)'+'</p>';
