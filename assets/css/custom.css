@@ -81,3 +81,16 @@
     font-weight: 700;
     color: darkblue;
 }
+
+#star {
+    overflow-wrap: break-word;
+}
+
+.kvadr {
+   margin-left: 5rem;
+   line-height: 5rem;
+}
+
+/* .be-kablelio-gale:nth-last-child() {
+    
+} */

@@ -6,7 +6,8 @@ let vardas = "Eglė";
 let pavarde = 'Navickienė';
 let gimtadienis = 'žiemą';
 
-document.getElementById("manoGimce").innerHTML = "1. Aš esu " + vardas + " " + pavarde + ", aš gimiau " + gimtadienis + ".";
+document.getElementById("manoGimce").innerHTML = "1. Aš esu " + vardas 
++ " " + pavarde + ", aš gimiau " + gimtadienis + ".";
 
 // 2 uzd.
 var x = 3.6;
@@ -23,7 +24,8 @@ function randomSkaicius(min, max) {
   };
 
 document.getElementById("random-sk").innerHTML = 
-"3. Jei min - 3, max - 12, <br>Funkcija: random skaičius * (max - min + 1) + min <br> Koks tas \"random\" skaičius, jei gaunam " + randomSkaicius(min, max) + "?";
+"3. Jei min - 3, max - 12, <br>Funkcija: random skaičius * (max - min + 1) + min <br> Koks tas \"random\" skaičius, jei gaunam " 
++ randomSkaicius(min, max) + "?";
 
 // 4 uzd.
 let a ;
@@ -68,7 +70,7 @@ let nuoIki1_return = '';
 let nuoIki2_return = '';
 let nuoIki3_return = '';
 
-// 1 skaicius:
+    // 1 skaicius:
 if(nuoIki1 < 0) {
   nuoIki1_return = '<span style="color:red;">' + nuoIki1 + '</span> ';
 }
@@ -81,7 +83,7 @@ if(nuoIki1 > 0) {
   nuoIki1_return = '<span style="color:green;">' + nuoIki1 + '</span> ';
 }
 
-// 2 skaicius:
+    // 2 skaicius:
 if(nuoIki2 < 0) {
   nuoIki2_return = '<span style="color:red;">' + nuoIki2 + '</span> ';
 }
@@ -94,7 +96,7 @@ if(nuoIki2 > 0) {
   nuoIki2_return = '<span style="color:green;">' + nuoIki2 + '</span> ';
 }
 
-// 3 skaicius:
+    // 3 skaicius:
 if(nuoIki3 < 0) {
   nuoIki3_return = '<span style="color:red;">' + nuoIki3 + '</span> ';
 }
@@ -107,7 +109,9 @@ if(nuoIki3 > 0) {
   nuoIki3_return = '<span style="color:green;">' + nuoIki3 + '</span> ';
 }
 
-document.getElementById('trys-skaiciai1').innerHTML = '<p>7. Trys skaičiai:'+'<br></br>' +' <strong>' + nuoIki1_return+'<br></br>'  + nuoIki2_return+'<br></br>' +nuoIki3_return + '</strong></p>';
+document.getElementById('trys-skaiciai1').innerHTML = '<p>7. Trys skaičiai:'
++'<br></br>' +' <strong>' + nuoIki1_return+'<br></br>'  
++ nuoIki2_return+'<br></br>' +nuoIki3_return + '</strong></p>';
 
 // 8 uzd.
 
@@ -122,4 +126,82 @@ if(zvakiu_kiekis >= 2000)
 
 let suma = zvakiu_kiekis - ( (zvakiu_kiekis / 100) * nuolaida);
 
-document.getElementById('nuolaida').innerHTML += '<p>Pirkta žvakių: ' + zvakiu_kiekis + ' Suma: <strong>' + suma + ' € </strong> (nuolaida - '+nuolaida+'%)'+'</p>';
+document.getElementById('nuolaida').innerHTML += '<p>Pirkta žvakių: ' + zvakiu_kiekis + ' Suma: <strong>' 
++ suma + ' EUR </strong> (nuolaida - '+nuolaida+'%)'+'</p>';
+
+// 2021 liepos 20 d. --------------------
+
+// 1.
+// a)
+let text = ''
+
+for (let i = 0; i<400; i++) {
+  text += '*';
+}
+
+document.getElementById("star").innerHTML = text;
+
+// b)
+
+let text2 = '';
+let counter = 0;
+
+for (let i=0; i<400; i++) {
+  if(counter == 50){
+    text2 += '<br />';
+  counter = 0;   
+  }
+  text2 += '*';
+  counter++;  
+}
+
+document.getElementById("star2").innerHTML = text2;
+
+// 2.
+let numbers = "";
+let newNumb = 0;
+
+for (let i=0; i < 300; i++){
+  newNumb = randomSkaicius(0, 300);  
+
+  if (newNumb>250){
+    numbers += ` <span style="color:red;" >  ${newNumb}  </span> `;
+  } else {
+    numbers += ` <span>  ${newNumb}  </span> `;
+  } 
+  
+};
+
+document.getElementById("trys-simtai").innerHTML = numbers;
+
+// 3.
+
+let numeriai = '';
+let otherNum = 0;
+
+for (let i=0; i < 3001; i++){
+if(otherNum%77 == 0)
+
+  numeriai += otherNum+',  ';
+  otherNum++;
+}
+
+
+document.getElementById("trys-tukst").innerHTML = numeriai;
+
+// 4.  
+
+let text4 = '';
+let counter4 = 0;
+
+for (let i=0; i<1000; i++) {
+  if(counter4 == 100){
+    text4 += '<br />';
+  counter4 = 0; 
+  }
+  text4 += '*';
+  counter4++;
+
+}
+
+document.getElementById("kvadr").innerHTML = text4;
