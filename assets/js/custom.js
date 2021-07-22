@@ -378,7 +378,7 @@ jQuery(Xduomenys).each(function (indeksas, reiksme) {
         },
     ];
 
-    var tablebody = $("#PlentelesVidus tbody");
+   /* var tablebody = $("#PlentelesVidus tbody");
 
     jQuery(imones).each(function (i, r) {
         var tablerow = jQuery("<tr>");
@@ -386,7 +386,7 @@ jQuery(Xduomenys).each(function (indeksas, reiksme) {
           jQuery("<td>").html(r[k]).appendTo(tablerow);
         });
         tablebody.append(tablerow);
-      });
+      });*/
 
     /*
     var tablebody = $("#PlentelesVidus tbody");

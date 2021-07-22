@@ -160,48 +160,64 @@ document.getElementById("star2").innerHTML = text2;
 // 2.
 let numbers = "";
 let newNumb = 0;
+let didesni = 0;
 
 for (let i=0; i < 300; i++){
   newNumb = randomSkaicius(0, 300);  
 
-  if (newNumb>250){
+  if(newNumb >150)
+  didesni++;
+
+  if (newNumb > 275) {
     numbers += ` <span style="color:red;" >  ${newNumb}  </span> `;
   } else {
+    // ``tokios kabutės leidžia įterpti kintamąjį į <span> vidų. Prieš int. dedam ženklą $ ir kintamąjį apgaubiam {}
+    // [ alternatyva - paprastose kabutėse atskirt span dalis: '<span>' + kint. + '</span>']
     numbers += ` <span>  ${newNumb}  </span> `;
   } 
   
 };
 
 document.getElementById("trys-simtai").innerHTML = numbers;
+document.getElementById("trys-simtai-did").innerHTML = 'Didesnių negu 150 skaičių yra ' + didesni;
 
 // 3.
 
 let numeriai = '';
-let otherNum = 0;
+let dalmuo = 0;
+let kablelis = ', ';
+let daliklis = 77;
 
-for (let i=0; i < 3001; i++){
-if(otherNum%77 == 0)
+for (let i=1; i <= 3000; i++) {
 
-  numeriai += otherNum+',  ';
-  otherNum++;
+  if(i % daliklis == 0) {
+    numeriai += i + kablelis; }
 }
 
+// NUIMA paskutinius 2 (tarpą ir kablelį) ženklus
+const editedText = numeriai.slice(0, -2);
 
-document.getElementById("trys-tukst").innerHTML = numeriai;
+document.getElementById("trys-tukst").innerHTML = editedText;
 
 // 4.  
 
-let text4 = '';
-let counter4 = 0;
+let kvadr = '';
+let detale = 0;
 
-for (let i=0; i<1000; i++) {
-  if(counter4 == 100){
-    text4 += '<br />';
-  counter4 = 0; 
-  }
-  text4 += '*';
-  counter4++;
+for (let i=0; i<50; i++) {  
+
+  for(detale = 0; detale < 50; detale++ ){ 
+
+    if(i==detale || 49-i==detale) {
+      kvadr += '<span style="color:red";> * </span>';
+    } else {
+      kvadr += ' * ';
+    }    
+  }    
+    kvadr += '<br />';
 
 }
 
-document.getElementById("kvadr").innerHTML = text4;
+document.getElementById("kvadr").innerHTML = kvadr;
+
+
