@@ -88,6 +88,25 @@
 
 .kvadr {
    margin-left: 3rem;
-   line-height: .75rem;
+   line-height: 1.15rem;
+}
+
+.saskiu-row {
+    display: flex;
+    align-items: baseline;
+}
+
+.zaidejas {
+    padding: 1rem 3rem;
+    text-align: center;
+}
+
+.rezult, .total {
+    padding: 2rem 3rem;
+    margin: .5rem;
+}
+
+#nugaletojas {
+    margin-bottom: 2rem;
 }
 

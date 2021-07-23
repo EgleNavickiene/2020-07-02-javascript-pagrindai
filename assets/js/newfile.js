@@ -214,10 +214,54 @@ for (let i=0; i<50; i++) {
       kvadr += ' * ';
     }    
   }    
-    kvadr += '<br />';
-
+  kvadr += '<br />';
 }
 
 document.getElementById("kvadr").innerHTML = kvadr;
+
+// 5. Papildoma
+
+let Benas = 0;
+let Jovita = 0;
+let final = 222;
+let string = '';
+let ended = false;
+
+for (let i=0; i<=100; i++) {
+
+  if(ended)
+    break;
+
+    let bscore = randomSkaicius(10, 20);
+    let jscore = randomSkaicius(5, 25);
+
+    document.getElementById("rez-beno").innerHTML += (i+1) + bscore + '<br />';
+    document.getElementById("rez-jovi").innerHTML +=  (i+1) + jscore + '<br />';  
+
+    Benas += bscore;
+    Jovita += jscore;
+
+    document.getElementById("tot-beno").innerHTML =  Benas;
+    document.getElementById("tot-jovi").innerHTML =  Jovita;     
+
+    // if (Benas > Jovita)
+    
+    if(Benas >= final || Jovita >= final) {
+      ended = true;
+
+          
+
+      if (Benas >= final) {
+        string = 'Benas, rezultatas: ' + Benas + ' : '+ Jovita;
+      } else {
+        string = 'Jovita, rezultatas: ' + Jovita + ' : '+ Benas;
+      }
+    }
+
+}
+
+document.getElementById("nugaletojas").innerHTML = string;
+
+
 
 
