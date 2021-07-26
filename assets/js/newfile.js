@@ -257,10 +257,38 @@ for (let i=0; i<=100; i++) {
         string = 'Jovita, rezultatas: ' + Jovita + ' : '+ Benas;
       }
     }
-
 }
 
 document.getElementById("nugaletojas").innerHTML = string;
+
+// 2021 liepos 23 d. --------------------
+
+// Vinies kalimas
+
+let kalimas = 1;
+let smugis = 1;
+
+for (let i = 1; i < 6; i++) {
+  for(let k = randomSkaicius(5, 20); k<85; k+=randomSkaicius(5, 20)){
+    smugis++;
+    document.getElementById("kiek-smugiu").innerHTML = "smugiai " + i;
+    document.getElementById("kiek-sukalta").innerHTML = "sukalta  " + k;
+  }
+
+}
+
+
+
+// Raudoni kvadratai
+
+
+
+
+
+  
+    
+
+
 
 
 
