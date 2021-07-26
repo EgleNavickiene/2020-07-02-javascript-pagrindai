@@ -112,21 +112,22 @@ body {padding-left: 2rem;}
     margin-bottom: 2rem;
 }
 
-.konteineris-tetis {
+.konteinerisTetis {
     position: relative;
     width: 500px;
     height: 500px;
-    background: grey;
+    background: lightgray;
+    margin: 0 auto;
 }
 
-#raudonas {
+.mazasKvadratelis {
     position: absolute;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background-color: red;
-    border-color: black;
-    border-style: solid;
-    border-width: 1px;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background: yellowgreen;
+    border: 1px solid rgb(53, 28, 7);
+    
 }
 
