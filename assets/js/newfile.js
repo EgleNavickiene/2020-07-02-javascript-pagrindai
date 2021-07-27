@@ -369,7 +369,7 @@ let stringas = 'Pavasarį žydi labai daug medžių';
 
 // 1 uzd. (aktorius)
 
-document.querySelector('.appended-text').innerHTML += '<br><hr><div class="pirma-uzduotis"><h3>2021 - 07 - 26</h3><hr></div>';
+document.querySelector('.appended-text').innerHTML += '<br><hr><div class="pirma-uzduotis bg-light"><h3>2021 - 07 - 26</h3><hr></div>';
 
 document.querySelector('.pirma-uzduotis').innerHTML += '<h4 style="color: green;">1 užduotis</h4>';
 
@@ -385,7 +385,7 @@ if(aktVardas.length > aktPavarde.length){
 }
 
 // 2 uzd. 
-document.querySelector('.appended-text').innerHTML += '<br><div class="antra-uzduotis"></div>';
+document.querySelector('.appended-text').innerHTML += '<br><div class="antra-uzduotis bg-warning p-2"></div>';
 document.querySelector('.antra-uzduotis').innerHTML += '<h4 style="color: green;">2 užduotis</h4>';
 
 let VARDAS = aktVardas.toUpperCase()
@@ -401,7 +401,7 @@ let Pav_1r = aktPavarde.substr(0, 1) + '.';
 document.querySelector('.trecia-uzduotis').innerHTML += `<div class="h4">${V_1r}${Pav_1r}</h4>`;
 
 // 4 uzd. 
-document.querySelector('.appended-text').innerHTML += '<br><div class="ketvirta-uzduotis"></div>';
+document.querySelector('.appended-text').innerHTML += '<br><div class="ketvirta-uzduotis bg-warning p-2"></div>';
 document.querySelector('.ketvirta-uzduotis').innerHTML += '<h4 style="color: green;">4 užduotis</h4>';
 
 let vardo_3pask = aktVardas.slice(Math.max(aktVardas.length -3, 0));
@@ -423,7 +423,7 @@ let strH_1repl = strH.replace(/o/g,'*');
 document.querySelector('.penkta-uzduotis').innerHTML += '<h4 class="H_be_O">'+strH_1repl.replace('O', '*')+'</h4>';
 
 // 6 uzd. 
-document.querySelector('.appended-text').innerHTML += '<br><div class="sesta-uzduotis"></div>';
+document.querySelector('.appended-text').innerHTML += '<br><div class="sesta-uzduotis bg-warning p-2"></div>';
 document.querySelector('.sesta-uzduotis').innerHTML += '<h4 style="color: green;">6 užduotis</h4>';
 
 //                let str_be_o = document.querySelector('.H_be_O');
@@ -432,6 +432,7 @@ var num_matches = (strH.match(/o/gi).length);
 
 document.querySelector('.sesta-uzduotis').innerHTML += '<h4>'+'Masyve "'+ strH + '" yra '+ num_matches + " \"o\" raidės."+ '</h4>' ;
 
+// 7 uzd.
 document.querySelector('.appended-text').innerHTML += '<br><div class="septinta-uzduotis"></div>';
 document.querySelector('.septinta-uzduotis').innerHTML += '<h4 style="color: green;">7 užduotis</h4>';
 
@@ -451,18 +452,43 @@ document.querySelector('.septinta-uzduotis').innerHTML += '<h4>' + str4+ '</br>'
 document.querySelector('.septinta-uzduotis').innerHTML += '<h4>' + str5+ '</br>' + sliced5 + '</h4>';
 document.querySelector('.septinta-uzduotis').innerHTML += '<h4>' + str6+ '</br>' + sliced6 + '</h4>';
 
-document.querySelector('.appended-text').innerHTML += '<br><div class="astunta-uzduotis"></div>';
+// 8 uzd.
+document.querySelector('.appended-text').innerHTML += '<br><div class="astunta-uzduotis bg-warning p-2"></div>';
 document.querySelector('.astunta-uzduotis').innerHTML += '<h4 style="color: green;">8 užduotis</h4>';
 
+// A-stringas:
 let str8 =  "Don't Be a Menace to South Central While Drinking Your Juice in the Hood";
+document.querySelector('.uzd-8aA').innerHTML += '<br><p>A masyvas: "' + str8 + '" ' + '</p>';
 
-let str8_masyvas = str8.split(" ");
-
-console.log(str8_masyvas);
-
+// B-stringas:
 let str8b = "Tik nereikia gąsdinti Pietų Centro, geriant sultis pas save kvartale";
+document.querySelector('.uzd-8bB').innerHTML += '<br><p>B masyvas: "' + str8b + '" ' + '</p>';
 
+// skaidom A stringa (split):
+let str8_masyvas = str8.split(" ");
+document.querySelector('.uzd-8a-stulpelis').innerHTML += '<p style="font-weight: 500; text-decoration: underline;">Išskaidytas A masyvas: </p>';
+//console.log(str8_masyvas);
+
+let iEl8a = '';
+str8_masyvas.forEach(naujasAmasyvas);
+document.querySelector('.uzd-8a-stulpelis').innerHTML += '<div >' +  iEl8a +  '</div>';
+
+function naujasAmasyvas(value, index, array) {
+  iEl8a += '<p class="stulpeliu">' + value + '</p>';
+}
+
+// skaidom B stringa (su split):
 let str8b_masyvas = str8b.split(" ");
+document.querySelector('.uzd-8b-stulp').innerHTML += '<p style="font-weight: 500; text-decoration: underline;">Išskaidytas B masyvas: </p>';
+//console.log(str8b_masyvas);
 
-console.log(str8b_masyvas);
+let iEl8b = '';
+str8b_masyvas.forEach(naujasBmasyvas);
+document.querySelector('.uzd-8b-stulp').innerHTML += '<div >' + iEl8b + '</div>';
 
+function naujasBmasyvas(value, index, array) {
+  iEl8b += '<p class="stulpeliu">' + value + '</p>';
+} 
+
+// Turim 2 naujus masyvus su atskirais elementais-zodziais
+//o kaip toliau???
