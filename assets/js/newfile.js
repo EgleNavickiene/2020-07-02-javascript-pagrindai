@@ -329,6 +329,7 @@ let stringas = 'Pavasarį žydi labai daug medžių';
 
 //apie replace
 // console.log(stringas.replace('žydi', 'atgimsta')); //1 zodis - ieskomas, 2 zodis - kuo keiciame
+//console.log(stringas.replaceAll('a', '*')); // a raide keiciam i *
 
 //apie repeat
 // console.log(stringas.repeat(2));
@@ -440,7 +441,7 @@ let str3 = 'An American in Paris';
 let str4 = 'Breakfast at Tiffany\'s';
 let str5 = '2001: A Space Odyssey';
 let str6 = 'It\'s a Wonderful Life'
-console.log(str4);
+//console.log(str4);
 
 sliced3 = str3.replace(/[aeiouy]/ig,'');
 sliced4 = str4.replace(/[aeiouy]/ig,'');
@@ -457,38 +458,364 @@ document.querySelector('.appended-text').innerHTML += '<br><div class="astunta-u
 document.querySelector('.astunta-uzduotis').innerHTML += '<h4 style="color: green;">8 užduotis</h4>';
 
 // A-stringas:
-let str8 =  "Don't Be a Menace to South Central While Drinking Your Juice in the Hood";
-document.querySelector('.uzd-8aA').innerHTML += '<br><p>A masyvas: "' + str8 + '" ' + '</p>';
+let str8a =  "Don't Be a Menace to South Central While Drinking Your Juice in the Hood";
+document.querySelector('.uzd-8aA').innerHTML += '<br><p>A masyvas: (' + str8a + ') ' + '</p>';
 
 // B-stringas:
 let str8b = "Tik nereikia gąsdinti Pietų Centro, geriant sultis pas save kvartale";
-document.querySelector('.uzd-8bB').innerHTML += '<br><p>B masyvas: "' + str8b + '" ' + '</p>';
+document.querySelector('.uzd-8bB').innerHTML += '<br><p>B masyvas: (' + str8b + ') ' + '</p>';
 
 // skaidom A stringa (split):
-let str8_masyvas = str8.split(" ");
-document.querySelector('.uzd-8a-stulpelis').innerHTML += '<p style="font-weight: 500; text-decoration: underline;">Išskaidytas A masyvas: </p>';
-//console.log(str8_masyvas);
+// let str8a_masyvas = str8a.split(" ");
+// //document.querySelector('.uzd-8a-stulpelis').innerHTML += '<p >'+ str8a_masyvas +  '</p>';
+// document.querySelector('.uzd-8a-stulpelis').innerHTML += '<br><p style="font-weight: 500; text-decoration: underline;">Išskaidytas A masyvas: </p>';
 
-let iEl8a = '';
-str8_masyvas.forEach(naujasAmasyvas);
-document.querySelector('.uzd-8a-stulpelis').innerHTML += '<div >' +  iEl8a +  '</div>';
+// console.log(str8a_masyvas);
 
-function naujasAmasyvas(value, index, array) {
-  iEl8a += '<p class="stulpeliu">' + value + '</p>';
-}
+// let iEl8a = '';
+// str8a_masyvas.forEach(naujasAmasyvas);
+// document.querySelector('.uzd-8a-stulpelis').innerHTML += '<div >' +  iEl8a +  '</div>';
 
-// skaidom B stringa (su split):
-let str8b_masyvas = str8b.split(" ");
-document.querySelector('.uzd-8b-stulp').innerHTML += '<p style="font-weight: 500; text-decoration: underline;">Išskaidytas B masyvas: </p>';
-//console.log(str8b_masyvas);
+// function naujasAmasyvas(value, index, array) {
+//   iEl8a += '<p class="stulpeliu">' + value + '</p>';
+// }
 
-let iEl8b = '';
-str8b_masyvas.forEach(naujasBmasyvas);
-document.querySelector('.uzd-8b-stulp').innerHTML += '<div >' + iEl8b + '</div>';
+// // skaidom B stringa (su split):
+// let str8b_masyvas = str8b.split(" ");
+// document.querySelector('.uzd-8b-stulp').innerHTML += '<p >'+ str8b_masyvas +  '</p>';
+// document.querySelector('.uzd-8b-stulp').innerHTML += '<br><p style="font-weight: 500; text-decoration: underline;">Išskaidytas B masyvas: </p>';
+// console.log(str8b_masyvas);
 
-function naujasBmasyvas(value, index, array) {
-  iEl8b += '<p class="stulpeliu">' + value + '</p>';
-} 
+// let iEl8b = '';
+// str8b_masyvas.forEach(naujasBmasyvas);
+// document.querySelector('.uzd-8b-stulp').innerHTML += '<div >' + iEl8b + '</div>';
+
+// function naujasBmasyvas(value, index, array) {
+//   iEl8b += '<p class="stulpeliu">' + value + ' ' + '</p>';
+// } 
 
 // Turim 2 naujus masyvus su atskirais elementais-zodziais
 //o kaip toliau???
+
+let fraze1 = "Don't Be a Menace to South Central Whe Drinkingil Your Juice in the Hood";
+let fraze2 = "Tik nereikia gąsdinti Pietų Centro, geriant sultis pas save kvartale";
+let tarpAts = 0
+
+function zodziuTikrinimas(phrase, ilgis) {
+  
+  let frazes_masyvas = phrase.split(' ');
+  
+  let zodziuCounteris = 0;  
+
+  for(let i=0; i < frazes_masyvas.length; i++) {
+
+    tarpAts += '<p>' +frazes_masyvas[i].length + ' ' + frazes_masyvas[i] + '</p>';
+
+      if(frazes_masyvas[i].length <= ilgis)            
+        zodziuCounteris++;
+    }
+      return zodziuCounteris;
+}
+
+let atsak8a = zodziuTikrinimas(fraze1, 5);
+let tarpinisAtsak_a = tarpAts;
+document.querySelector('.uzd-8a-stulpelis').innerHTML += tarpinisAtsak_a +  '</br>';
+document.querySelector('.uzd-8a-apacioj').innerHTML += '<p >'+ atsak8a +  '</p>';
+
+let atsak8b = zodziuTikrinimas(fraze2, 5);
+let tarpinisAtsak_b = tarpAts;
+document.querySelector('.uzd-8b-stulp').innerHTML += tarpinisAtsak_b +  '</br>';
+document.querySelector('.uzd-8b-apacioj').innerHTML += '<p >'+ atsak8b +  '</p>';
+
+document.querySelector('.appended-text2').innerHTML += '<p >  </p><br>';
+
+// 2021-07-28
+//----------headingo funkcija yra faile "funkcijos.js"-----------
+
+let elementas = headingas('Funkcijos_2021-07-28');
+
+// 1 uzd.
+headingas('Pirma užduotis ', false, elementas);
+
+document.querySelector('.appended-text2').innerHTML += '<p>' + 'Sukurkite funkciją kuri patikrintų' + 
+' du gautus parametrus stringo pavidale. Tikrinamas dvieju stringų ilgis.' + 
+' Sukurti tris galimus scenarijus: Jei pirmasis yra didesnis už antrą. Jei ' + 
+'antrasis didesnis už pirmąjį. Jei abiejų ilgis vienodas. Funkciją turi ' + 
+'grąžinti tekstinį atsakymą. Pvz. ‘Pirmasis stringas yra ilgesnis už antrajį’. ' + 
+' Atsakymą atvaizduokite lange. </p><br>';
+
+let pirmaFraze;
+let antraFraze;
+
+
+function stringoIlgis(ilgis1, ilgis2) {
+   
+  if(ilgis1.length > ilgis2.length){
+    return 'Ilgesnė 1 frazė';
+    
+  }  else if(ilgis1.length < ilgis2.length){
+      return 'Ilgesnė 2 frazė';
+  }    
+
+  if(ilgis1.length == ilgis2.length){
+    return "Frazės vienodo ilgio";
+  }
+    
+}
+
+pirmaFraze = 'Griovio neperšokęs nesakyk "op" ';
+antraFraze = 'Šešios žasys su šešiais žąsyčiais';
+
+document.querySelector('.appended-text2').innerHTML += '<p>Pirma frazė: '+ pirmaFraze + ' (' + pirmaFraze.length + ' ženklai)' + '</p>';
+document.querySelector('.appended-text2').innerHTML += '<p>Antra frazė: '+ antraFraze + ' (' + antraFraze.length + ' ženklai)' + '</p>';
+
+document.querySelector('.appended-text2').innerHTML += '<p>'+ stringoIlgis(pirmaFraze, antraFraze) + '</p> <hr>' ;
+
+pirmaFraze = 'Šiandien buvo labai karšta diena';
+antraFraze = 'O kas žino, koks oras bus rytoj?';
+
+document.querySelector('.appended-text2').innerHTML += '<p>Pirma frazė: '+ pirmaFraze + ' (' + pirmaFraze.length + ' ženklai)' + '</p>';
+document.querySelector('.appended-text2').innerHTML += '<p>Antra frazė: '+ antraFraze + ' (' + antraFraze.length + ' ženklai)' + '</p>';
+
+document.querySelector('.appended-text2').innerHTML += '<p>'+ stringoIlgis(pirmaFraze, antraFraze) + '</p>  <hr>' ;
+
+pirmaFraze = 'Mano pasas žalias - kur noriu važiuoju';
+antraFraze = 'Į kairę, į dešinę - Europą matuoju';
+
+document.querySelector('.appended-text2').innerHTML += '<p>Pirma frazė: '+ pirmaFraze + ' (' + pirmaFraze.length + ' ženklai)' + '</p>';
+document.querySelector('.appended-text2').innerHTML += '<p>Antra frazė: '+ antraFraze + ' (' + antraFraze.length + ' ženklai)' + '</p>';
+
+document.querySelector('.appended-text2').innerHTML += '<p>'+ stringoIlgis(pirmaFraze, antraFraze) + '</p>  <hr>' ;
+
+//2 uzd.
+headingas('Antra užduotis', false, elementas);
+
+document.querySelector('.appended-text2').innerHTML += '<p>Sukurkite funkciją kuri priimtų penkis parametrus ir grąžintų stringą, kuriame x būtų pakeistas kitamaisiais. “Jūs būsite x ir gyvensite x. Susituoksite su x bei turėsite šunį vardu x, o mirsite sulaukę x metų.” Pakartokite funkciją tris kartus su vis kitokiais parametrais.</p>'
+
+let pirmasAS;
+let antrasKURgyvenciau;
+let treciasANTRApuse;
+let ketvirtasSUVA;
+let kiek_Gyvenciau;
+
+//Jei aš būčiau x 
+//ir gyvenčiau x. 
+//Susituokčiau su x, 
+//mes turėtume šunį vardu x, 
+//ir sulaukčiau x metų.
+
+function sakinys(x1, x2, x3, x4, x5) {
+  pirmasAS = x1;
+  antrasKURgyvenciau = x2;
+  treciasANTRApuse = x3;
+  ketvirtasSUVA = x4;
+  kiek_Gyvenciau = x5;
+
+  return 'Jei aš būčiau '+ x1 + ' ir gyvenčiau ' + x2 + ', susituokčiau su '+ x3 + 
+  ', mes turėtume šunį vardu ' + x4 + ' ir aš sulaukčiau  ' + x5 +' metų.'
+}
+
+  pirmasAS = "Žana D'Ark";
+  antrasKURgyvenciau = "Prancūzijoj";
+  treciasANTRApuse = "D'Artanjanu";
+  ketvirtasSUVA = 'Orleanas';
+  kiek_Gyvenciau = '80 ';
+
+  document.querySelector('.appended-text2').innerHTML += '<p>'+ 
+  sakinys(pirmasAS, antrasKURgyvenciau, treciasANTRApuse, 
+  ketvirtasSUVA, kiek_Gyvenciau) + '</p><hr>' ;
+
+  pirmasAS = "jauna meružėlė";
+  antrasKURgyvenciau = "gražiame namelyje";
+  treciasANTRApuse = "jaunu bernužėliu";
+  ketvirtasSUVA = 'Brisius';
+  kiek_Gyvenciau = 'gal bent 60 ';
+
+  document.querySelector('.appended-text2').innerHTML += '<p>'+ 
+  sakinys(pirmasAS, antrasKURgyvenciau, treciasANTRApuse, 
+  ketvirtasSUVA, kiek_Gyvenciau) + '</p><hr>' ;
+
+  pirmasAS = "sena merga";
+  antrasKURgyvenciau = "kažkur kaime";
+  treciasANTRApuse = "senu diedu";
+  ketvirtasSUVA = 'Tūzas';
+  kiek_Gyvenciau = '100 ';
+
+  document.querySelector('.appended-text2').innerHTML += '<p>'+ 
+  sakinys(pirmasAS, antrasKURgyvenciau, treciasANTRApuse, 
+  ketvirtasSUVA, kiek_Gyvenciau) + '</p><hr>' ;
+
+// 3 uzd.
+headingas('Trečia užduotis', false, elementas);
+
+let xAmzius;
+
+function sunsAmzius(xAmzius){
+  
+  amziausSkaiciavimas = (xAmzius*7);
+   
+  if((amziausSkaiciavimas > 10 && amziausSkaiciavimas < 20) || amziausSkaiciavimas%10 == 0 ) {
+      return 'Jūsų šuniukui yra '+ amziausSkaiciavimas + ' žmogiškų metų';
+    }   
+     else {
+        
+        return 'Jūsų šuniukui yra '+ amziausSkaiciavimas + ' žmogiški metai'; }
+}
+
+document.querySelector('.appended-text2').innerHTML += '<p>'+ sunsAmzius(5) + '</p>';
+
+//// 2021-07-29 ////
+
+// 4 uzd.
+headingas('Ketvirta užduotis', false, elementas);
+document.querySelector('.appended-text2').innerHTML += '<p>'+ 'Perkelta į dienos viršų (Length Converter)' + '</p>';
+
+// let convNumber;
+// let KmNumber;
+// let oneMile = (1.609344*oneKm);
+// document.querySelector('.appended-text2').innerHTML += 
+//   '<div><p><input id="km" type="number";>'+' enter km'+'</p>'+'<p></input>' + 
+//   '<input id="miles" type="number";>'+' enter miles'+'</input>'+'</p></div>';
+
+  function LengthConverter(valNum) {
+    document.getElementById("outputKm").innerHTML=valNum*1.609344;
+  }
+
+  // 2021-07-28--------------------------------------------
+
+
+headingas('Masyvai_2021-07-29', false, elementas);
+
+// 1 uzd.---------------
+headingas('Pirma užd.', false, elementas);
+
+let naujasMas = [] ;
+//console.log(naujasMas);   //--------------
+
+for(let i=0; i<30; i++) {  
+  let sugeneruotasSkaicius = randomSkaicius(5, 25);
+  naujasMas.push(sugeneruotasSkaicius);
+}
+
+document.querySelector('.appended-text2').innerHTML += '<p>'+ naujasMas + '</p>';
+
+
+naujasMas.forEach(masyvoSkaiciavimas);
+
+function masyvoSkaiciavimas(reiksme, indeksas) {
+ console.log('Indeksas: ' + indeksas + ' Reiksme: ' + reiksme);  //--------------
+}
+
+// 2 uzd. -------------------
+headingas('Antra užd.', false, elementas);
+
+// a)------------
+function masyvoUzd_a(reiksme, indeksas) {
+
+  let counterMas=0;
+
+  for(let i=0; i<30; i++) {
+    if(reiksme[i] > 10)
+      
+    counterMas++;
+    
+  }
+  return counterMas;  
+}
+
+DidesniuUz_10 = masyvoUzd_a(naujasMas);
+//console.log(DidesniuUz_10);   //--------------
+
+document.querySelector('.appended-text2').innerHTML += '<p>'+'a) Didesnių už 10 skaičių yra '+ DidesniuUz_10 +'</p>';
+
+// b) ---------------
+maks = Math.max(...naujasMas);
+console.log('Maks '+ maks)
+document.querySelector('.appended-text2').innerHTML += '<p>'+'b) Didžiausias skaičius masyve: '+ maks +'</p>';
+
+let ind = naujasMas.indexOf(maks);
+
+console.log('Maks-o indeksas '+ind);
+document.querySelector('.appended-text2').innerHTML += '<p>'+'Didžiausio skaičiaus masyve indeksas: '+ ind +'</p>';
+
+//Math.max.apply(null, naujasMas);
+//console.log(Math.max.apply(null, naujasMas));
+
+
+
+// c) ------------------
+let evenMas = [];
+let sum = 0;
+
+for(var i = 2; i < naujasMas.length; i += 2) {  // take every second element
+  evenMas.push(naujasMas[i]);
+  sum += naujasMas[i];  
+}
+document.querySelector('.appended-text2').innerHTML += '<p>'+'c) Lyginius indeksus turintys elementai: '+ evenMas + '<br> Jų suma:' + sum + '</p>';
+console.log(sum);
+
+
+// d) -------
+//Viliaus
+let atimtasMas = [];
+
+for(let i = 0; i < naujasMas.length; i++ ) {
+
+  atimtasMas[i] = (naujasMas[i] - i);
+}
+document.querySelector('.appended-text2').innerHTML += '<p>'+'D) -Viliaus sprendimas <br> Atimtos reiksmes - naujas mas: '+atimtasMas;
+
+///---------------------------///
+////Gintauto
+
+let masyvoNN = [];
+naujasMas.forEach((reiksme, index) => {
+  masyvoNN.push(reiksme-index);
+ });
+ console.log(masyvoNN);
+
+ document.querySelector('.appended-text2').innerHTML += '<p> d) Naujas masyvas (1 uždavinio masyvo reikšmė minus tos reikšmės indeksas):</br> '+ masyvoNN + '</p>';
+
+ // e)
+ for(let i=1; i<10; i++) {  
+ masyvoNN.push(randomSkaicius(5, 25));
+ }
+ console.log(masyvoNN);
+ document.querySelector('.appended-text2').innerHTML += '<p> Dar 10 naujų elementų papildytas masyvas: </br>'+ masyvoNN + '</p>';
+
+// f)
+let FmasyvasPor = [];
+let FmasNepor = [];
+
+for(var i = 2; i < masyvoNN.length; i += 2) {  // take every second element
+  FmasyvasPor.push(masyvoNN[i]);  
+}
+
+console.log(FmasyvasPor);
+document.querySelector('.appended-text2').innerHTML += '<p> f-1) Masyvas iš porinių elemetų:  ' + FmasyvasPor + '</p>'
+
+for(var i = 1; i < masyvoNN.length; i += 2) {  // take every second element
+  FmasNepor.push(masyvoNN[i]);  
+}
+
+console.log(FmasNepor);
+document.querySelector('.appended-text2').innerHTML += '<p> f-2) Masyvas iš nelyginių elemetų:  ' + FmasNepor + '</p>'
+
+
+
+// g)--------------NESIGAUNA
+let oddMas = [];
+let EvenMas = [];
+
+masyvoNN.forEach(function(reiksme, indeksas) {
+if(indeksas%2 ==0 && indeksas != 0) {
+  oddMas.push(reiksme);
+} else {
+  EvenMas.push(reiksme);
+}
+});
+
+document.querySelector('.appended-text2').innerHTML += '<p> f-2) Masyvas iš lyginių indeksu:  ' + oddMas + '</p>'
+
+document.querySelector('.appended-text2').innerHTML += '<p> f-2) Masyvas iš nelyginių indeksų:  ' + EvenMas + '</p>'
+

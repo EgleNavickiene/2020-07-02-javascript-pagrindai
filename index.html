@@ -286,7 +286,7 @@
     <div class="col-6 uzd-8bB"></div> 
   </div>
   <div class="row d-flex">
-    <div class="col-6 uzd-8a"> 
+    <div class="col-6 uzd-8a d-flex"> 
       <div class="col-6 uzd-8a-stulpelis"></div>
     </div>
     <div class="col-6 uzd-8b"> 
@@ -298,6 +298,24 @@
     <div class="col-6 uzd-8b-apacioj"></div> 
   </div>
 </div>
+
+<div class="appended-text2">
+  <h3 class="fw-bold mt-4">Length Converter</h3>
+  <div class="row d-flex converting">
+    <div class="col-6">   
+
+      <p>Type a value in the Kilometers field to convert the value to Miles:</p>
+      
+      <p>
+        <label>Km</label>
+        <input id="inputKm" type="number" placeholder="Km" 
+        oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
+      </p>
+      <p>Miles: <span id="outputKm"></span></p>  
+    </div>
+  </div>
+</div>
+
 
 
 
@@ -317,8 +335,10 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/funkcijos.js"></script>
     <script type="text/javascript" src="assets/js/custom.js"></script>
     <script type="text/javascript" src="assets/js/newfile.js"></script>
+    
 
 </body>
 </html>
