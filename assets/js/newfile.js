@@ -703,7 +703,7 @@ document.querySelector('.appended-text2').innerHTML += '<p>'+ naujasMas + '</p>'
 naujasMas.forEach(masyvoSkaiciavimas);
 
 function masyvoSkaiciavimas(reiksme, indeksas) {
- console.log('Indeksas: ' + indeksas + ' Reiksme: ' + reiksme);  //--------------
+ //console.log('Indeksas: ' + indeksas + ' Reiksme: ' + reiksme);  //--------------
 }
 
 // 2 uzd. -------------------
@@ -730,12 +730,12 @@ document.querySelector('.appended-text2').innerHTML += '<p>'+'a) Didesnių už 1
 
 // b) ---------------
 maks = Math.max(...naujasMas);
-console.log('Maks '+ maks)
+//console.log('Maks '+ maks)
 document.querySelector('.appended-text2').innerHTML += '<p>'+'b) Didžiausias skaičius masyve: '+ maks +'</p>';
 
 let ind = naujasMas.indexOf(maks);
 
-console.log('Maks-o indeksas '+ind);
+//console.log('Maks-o indeksas '+ind);
 document.querySelector('.appended-text2').innerHTML += '<p>'+'Didžiausio skaičiaus masyve indeksas: '+ ind +'</p>';
 
 //Math.max.apply(null, naujasMas);
@@ -752,7 +752,7 @@ for(var i = 2; i < naujasMas.length; i += 2) {  // take every second element
   sum += naujasMas[i];  
 }
 document.querySelector('.appended-text2').innerHTML += '<p>'+'c) Lyginius indeksus turintys elementai: '+ evenMas + '<br> Jų suma:' + sum + '</p>';
-console.log(sum);
+//console.log(sum);
 
 
 // d) -------
@@ -772,7 +772,7 @@ let masyvoNN = [];
 naujasMas.forEach((reiksme, index) => {
   masyvoNN.push(reiksme-index);
  });
- console.log(masyvoNN);
+ //console.log(masyvoNN);
 
  document.querySelector('.appended-text2').innerHTML += '<p> d) Naujas masyvas (1 uždavinio masyvo reikšmė minus tos reikšmės indeksas):</br> '+ masyvoNN + '</p>';
 
@@ -780,10 +780,10 @@ naujasMas.forEach((reiksme, index) => {
  for(let i=1; i<10; i++) {  
  masyvoNN.push(randomSkaicius(5, 25));
  }
- console.log(masyvoNN);
+ //console.log(masyvoNN);
  document.querySelector('.appended-text2').innerHTML += '<p> Dar 10 naujų elementų papildytas masyvas: </br>'+ masyvoNN + '</p>';
 
-// f)
+// f) Gintauto kodas
 let FmasyvasPor = [];
 let FmasNepor = [];
 
@@ -791,19 +791,19 @@ for(var i = 2; i < masyvoNN.length; i += 2) {  // take every second element
   FmasyvasPor.push(masyvoNN[i]);  
 }
 
-console.log(FmasyvasPor);
-document.querySelector('.appended-text2').innerHTML += '<p> f-1) Masyvas iš porinių elemetų:  ' + FmasyvasPor + '</p>'
+//console.log(FmasyvasPor);
+document.querySelector('.appended-text2').innerHTML += '<p> f-1) Masyvas iš porinių indeksų elemetų:  ' + FmasyvasPor + '</p>'
 
 for(var i = 1; i < masyvoNN.length; i += 2) {  // take every second element
   FmasNepor.push(masyvoNN[i]);  
 }
 
-console.log(FmasNepor);
-document.querySelector('.appended-text2').innerHTML += '<p> f-2) Masyvas iš nelyginių elemetų:  ' + FmasNepor + '</p>'
+//console.log(FmasNepor);
+document.querySelector('.appended-text2').innerHTML += '<p> f-2) Masyvas iš nelyginių indeksų elemetų:  ' + FmasNepor + '</p>'
 
 
 
-// g)--------------NESIGAUNA
+// g)-Viliaus kodas:
 let oddMas = [];
 let EvenMas = [];
 
@@ -815,7 +815,130 @@ if(indeksas%2 ==0 && indeksas != 0) {
 }
 });
 
-document.querySelector('.appended-text2').innerHTML += '<p> f-2) Masyvas iš lyginių indeksu:  ' + oddMas + '</p>'
+document.querySelector('.appended-text2').innerHTML += '<p> f-1-2) Masyvas iš lyginių indeksu:  ' + oddMas + '</p>'
 
-document.querySelector('.appended-text2').innerHTML += '<p> f-2) Masyvas iš nelyginių indeksų:  ' + EvenMas + '</p>'
+document.querySelector('.appended-text2').innerHTML += '<p> f-2-2) Masyvas iš nelyginių indeksų:  ' + EvenMas + '</p>'
 
+// g)--------------NESIGAUNAAAA---- :(  ---
+//  Suraskite pirmą (mažiausią) indeksą, kurio elemento reikšmė didesnė už 10
+
+// let maziausias_indeksas = 0;
+
+// for(let i=0; i<30; i++) {
+//     if(reiksme[i] > 10)
+//     maziausias_indeksas = i;
+//       return console.log('daugiau uz 10 - '+maziausias_indeksas);
+//   }
+
+//2021 - 08 - 01 --------------- RUGPJŪČIO 1 ---
+headingas('2021 - 08 - 02', false, elementas);
+
+// tekstinio masyvo sort
+document.querySelector('.appended-text2').innerHTML += '<p>'+'Tekstinis masyvas: '+'</p>';
+
+let tekstinisMasyvas = ['Jogile', 'Aiste', 'Jovita', 'Egle', 'Marius', 'Gintautas','Tomas', 'Žilvinas'];
+
+document.querySelector('.appended-text2').innerHTML += '<p>'+ tekstinisMasyvas.sort() +'</p>';
+
+document.querySelector('.appended-text2').innerHTML += '<p>'+ tekstinisMasyvas.reverse() +'</p>';
+
+headingas('1 uzduotis', false, elementas);
+
+// 1 uzd.
+//Sugeneruokite masyvą, kurio reikšmės atsitiktinės raidės A, B, C ir D, o ilgis 200. Suskaičiuokite kiek yra kiekvienos raidės.
+
+raides = 'ABCD';
+randomraidesMas = [];
+
+let countA = 0;
+let countB = 0;
+let countC = 0;
+let countD = 0;
+
+for ( var i = 0; i < 200; i++ ) {
+
+  let raideX = raides.charAt( Math.floor( Math.random() * raides.length) );
+
+  randomraidesMas.push(raideX);
+
+  if(randomraidesMas[i] == 'A') 
+    countA++;
+  if(randomraidesMas[i] == 'B')
+    countB++;
+  if(randomraidesMas[i] == 'C')
+    countC++;
+  if(randomraidesMas[i] == 'D')
+    countD++;
+}
+
+
+//console.log(randomraidesMas);
+document.querySelector('.appended-text2').innerHTML += '<p>'+ randomraidesMas +'</p>';
+
+
+
+// for ( var i = 0; i < 200; i++ ) {
+//   if(randomraidesMas[i] == 'A') 
+//     countA++;
+//   if(randomraidesMas[i] == 'B')
+//     countB++;
+//   if(randomraidesMas[i] == 'C')
+//     countC++;
+//   if(randomraidesMas[i] == 'D')
+//     countD++;
+// }
+
+document.querySelector('.appended-text2').innerHTML += '<p>'+ 'A raidžių ' + countA +';<br></p>';
+document.querySelector('.appended-text2').innerHTML += '<p>'+ 'B raidžių ' + countB +';<br></p>';
+document.querySelector('.appended-text2').innerHTML += '<p>'+ 'C raidžių ' + countC +';<br></p>';
+document.querySelector('.appended-text2').innerHTML += '<p>'+ 'D raidžių ' + countD +'.<br></p>';
+
+
+
+//2 uzd.
+//Išrūšiuokite pirmo uždavinio masyvą pagal abecėlę.
+document.querySelector('.appended-text2').innerHTML += '<p>'+ randomraidesMas.sort() +'</p>';
+
+//3 uzd.
+//Sugeneruokite du masyvus, kurių reikšmės yra atsitiktiniai skaičiai nuo 100 iki 999. Masyvų ilgiai 100. 
+//Masyvų reikšmės turi būti unikalios savo masyve (t.y. neturi kartotis).
+
+/*let newRandomArray;
+
+function newRandomSkaicius(min, max) { 
+
+  return Math.floor(Math.random())
+};
+
+let uniqueNumber = newRandomSkaicius(100, 999);
+console.log('unikalus' + uniqueNumber);
+
+// Defining function to get unique values from an array
+function getUnique(array){
+  let uniqueArray = [];
+  
+  // Loop through array values
+  for(i=0; i < array.length; i++){
+      if(uniqueArray.indexOf(array[i]) === -1) {
+          uniqueArray.push(array[i]);
+      }
+  }
+  return uniqueArray;
+}
+
+getUnique(newRandomArray);
+//console.log( uniqueArray);
+
+let mas100_1 = [];
+let mas100_2 = [];
+
+  console.log('pirmas masyvas iš 100: ' + mas100_1);
+  document.querySelector('.appended-text2').innerHTML += '<p> Pirmas 100 elementų masyvas: </br>'+ mas100_1 + '</p>';
+
+  
+
+  for(let i=0; i<100; i++) {  
+    mas100_2.push(newRandomSkaicius(100, 999));
+    }
+    console.log('antras masyvas iš 100: ' + mas100_2);
+    document.querySelector('.appended-text2').innerHTML += '<p> Antras 100 elementų masyvas: </br>'+ mas100_2 + '</p>';8*/
