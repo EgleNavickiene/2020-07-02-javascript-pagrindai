@@ -873,8 +873,7 @@ for ( var i = 0; i < 200; i++ ) {
 
 
 //console.log(randomraidesMas);
-document.querySelector('.appended-text2').innerHTML += '<p>'+ randomraidesMas +'</p>';
-
+document.querySelector('.appended-text2').innerHTML += '<p style= "overflow-wrap: break-word;">'+ randomraidesMas +'</p>';
 
 
 // for ( var i = 0; i < 200; i++ ) {
@@ -894,51 +893,43 @@ document.querySelector('.appended-text2').innerHTML += '<p>'+ 'C raidžių ' + c
 document.querySelector('.appended-text2').innerHTML += '<p>'+ 'D raidžių ' + countD +'.<br></p>';
 
 
-
+headingas('2 uzduotis', false, elementas);
 //2 uzd.
 //Išrūšiuokite pirmo uždavinio masyvą pagal abecėlę.
-document.querySelector('.appended-text2').innerHTML += '<p>'+ randomraidesMas.sort() +'</p>';
+document.querySelector('.appended-text2').innerHTML += '<p style= "overflow-wrap: break-word;">'+ randomraidesMas.sort() +'</p>';
 
+headingas('3 uzduotis', false, elementas);
 //3 uzd.
 //Sugeneruokite du masyvus, kurių reikšmės yra atsitiktiniai skaičiai nuo 100 iki 999. Masyvų ilgiai 100. 
 //Masyvų reikšmės turi būti unikalios savo masyve (t.y. neturi kartotis).
 
-/*let newRandomArray;
+let newRandomArray_1 = [];
+let newRandomArray_2 = [];
+let uniqueNumber = 0;
 
-function newRandomSkaicius(min, max) { 
+while(newRandomArray_1.length < 100) {    
 
-  return Math.floor(Math.random())
-};
-
-let uniqueNumber = newRandomSkaicius(100, 999);
-console.log('unikalus' + uniqueNumber);
-
-// Defining function to get unique values from an array
-function getUnique(array){
-  let uniqueArray = [];
+  let uniqueNumber = randomSkaicius(100, 999);
   
-  // Loop through array values
-  for(i=0; i < array.length; i++){
-      if(uniqueArray.indexOf(array[i]) === -1) {
-          uniqueArray.push(array[i]);
-      }
+    if(!newRandomArray_1.includes(uniqueNumber)) {
+
+    newRandomArray_1.push(uniqueNumber);      
   }
-  return uniqueArray;
 }
+ 
+  document.querySelector('.appended-text2').innerHTML += '<p style= "overflow-wrap: break-word;"> Pirmas 100 elementų masyvas: </br>'+ newRandomArray_1 + ' (ilgis - '+ newRandomArray_1.length +  ')</p>';
 
-getUnique(newRandomArray);
-//console.log( uniqueArray);
+  while(newRandomArray_2.length < 100) {    
 
-let mas100_1 = [];
-let mas100_2 = [];
-
-  console.log('pirmas masyvas iš 100: ' + mas100_1);
-  document.querySelector('.appended-text2').innerHTML += '<p> Pirmas 100 elementų masyvas: </br>'+ mas100_1 + '</p>';
+    let uniqueNumber = randomSkaicius(100, 999);
+    
+      if(!newRandomArray_2.includes(uniqueNumber)) {
+  
+      newRandomArray_2.push(uniqueNumber);      
+    }
+  }
+  
+  document.querySelector('.appended-text2').innerHTML += '<p style= "overflow-wrap: break-word;"> Antras 100 elementų masyvas: </br>'+ newRandomArray_2 + ' (ilgis - '+ newRandomArray_2.length +  ')</p>';
 
   
-
-  for(let i=0; i<100; i++) {  
-    mas100_2.push(newRandomSkaicius(100, 999));
-    }
-    console.log('antras masyvas iš 100: ' + mas100_2);
-    document.querySelector('.appended-text2').innerHTML += '<p> Antras 100 elementų masyvas: </br>'+ mas100_2 + '</p>';8*/
+  
