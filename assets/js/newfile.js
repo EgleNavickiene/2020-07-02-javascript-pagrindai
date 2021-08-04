@@ -1048,36 +1048,25 @@ let OBJEKTAS_1 = {};
 
 let RaidesN = 'ABCDEFGHIJKLMNOPRSTUVWXYZ'; 
 
-let raidesRandom = [];
-let SkaiciaiRandom = [];
+// let SkaiciaiRandom = [];
 
-for (let i=0; i<10; i++){
+for (let i=0; i<100; i++){
 
-  for ( i=0; i<10; i++){    
+  let raidesRandom = '';
+
+  for (let i=0; i<5; i++){    
     
-    randomRaides = RaidesN.charAt(Math.random()*RaidesN.length); 
-    raidesRandom.push(randomRaides);         
+    raidesRandom += RaidesN.charAt(Math.random()*RaidesN.length); 
+    //raidesRandom.push(randomRaides);         
   }   
-  console.log('raides: '+ raidesRandom);  
+  //console.log('raides:   '+ raidesRandom);  
 
-  for ( i=0; i<10; i++){
     
-    RandomSkaicius2 = randomSkaicius(55, 5555);  
-    SkaiciaiRandom.push(RandomSkaicius2);  
-  }  
-
-  console.log('skaiciai: '+SkaiciaiRandom);
-    
-  for( i=0; i < 10; i++){
-    OBJEKTAS_1[raidesRandom[i]] = SkaiciaiRandom[i];
-  }  
-  
-  console.log(OBJEKTAS_1);
-
-  for(let indeksas in OBJEKTAS_1) {
-    document.querySelector('.appended-text2').innerHTML +=  
-    '<p>'+ [i] + ': '+ OBJEKTAS_1 + '<br><p>';
-  }
+  OBJEKTAS_1[raidesRandom] = randomSkaicius(5, 55);  
+  document.querySelector('.appended-text2').innerHTML +=  '<p>'+ raidesRandom +' ' + OBJEKTAS_1[raidesRandom] +'<br><p>';
 }
+
+console.log(OBJEKTAS_1);
+
 
 
