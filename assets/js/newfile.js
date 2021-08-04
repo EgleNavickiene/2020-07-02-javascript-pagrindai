@@ -1,7 +1,7 @@
 //alert(skaiciavimas);
 
 
-// 1 uzd.
+// 1 užd.
 let vardas = "Eglė";
 let pavarde = 'Navickienė';
 let gimtadienis = 'žiemą';
@@ -9,13 +9,13 @@ let gimtadienis = 'žiemą';
 document.getElementById("manoGimce").innerHTML = "1. Aš esu " + vardas 
 + " " + pavarde + ", aš gimiau " + gimtadienis + ".";
 
-// 2 uzd.
+// 2 užd.
 var x = 3.6;
 document.getElementById("suapvalinimas").innerHTML = "2.(round) 3,5 ~ " + Math.round(3.5); 
 document.getElementById("suapval-aukstyn").innerHTML = "(ceil) 4,2 ~ " + Math.ceil(4.2); 
 document.getElementById("suapval-zemyn").innerHTML = "(floor) 2,6 ~ " + Math.floor(2.6); 
 
-// 3 uzd.
+// 3 užd.
 let min = 3;
 let max = 12;
 
@@ -27,7 +27,7 @@ document.getElementById("random-sk").innerHTML =
 "3. Jei min - 3, max - 12, <br>Funkcija: random skaičius * (max - min + 1) + min <br> Koks tas \"random\" skaičius, jei gaunam " 
 + randomSkaicius(min, max) + "?";
 
-// 4 uzd.
+// 4 užd.
 let a ;
 let b ;
 
@@ -41,7 +41,7 @@ if (a == 0 ) {
 }
 
 
-//5 uzd/?
+//5 užd/?
 let x1 = randomSkaicius(0, 25);
 let x2 = randomSkaicius(0, 25);
 let x3 = randomSkaicius(0, 25);
@@ -57,11 +57,11 @@ document.getElementById("penkta-uzd").innerHTML = '5. Pirmas: '+
 x1 +', antras: ' + x2 + ' trečias: ' + x3 + '. Mediana:' + mediana;
 
 
-// 6 uzd.
+// 6 užd.
 c = (randomSkaicius(min, max)*10);
 document.getElementById("rodyt-random").innerHTML = "6. Random skaicius "+ c ;
 
-// 7 uzd.
+// 7 užd.
 const nuoIki1 = randomSkaicius(-10, 10);
 const nuoIki2 = randomSkaicius(-10, 10);
 const nuoIki3 = randomSkaicius(-10, 10);
@@ -113,7 +113,7 @@ document.getElementById('trys-skaiciai1').innerHTML = '<p>7. Trys skaičiai:'
 +'<br></br>' +' <strong>' + nuoIki1_return+'<br></br>'  
 + nuoIki2_return+'<br></br>' +nuoIki3_return + '</strong></p>';
 
-// 8 uzd.
+// 8 užd.
 
 const zvakiu_kiekis = randomSkaicius(5, 3000);
 let nuolaida = 0;
@@ -279,11 +279,11 @@ for (let i = 1; i < 50; i++) {
 
 // Raudoni kvadratai
 
-document.querySelector('.appended-text').innerHTML += '<div class="septinta_uzduotis"></div>';
+document.querySelector('.appended-text').innerHTML += '<div class="septinta_užduotis"></div>';
 
-document.querySelector('.septinta_uzduotis').innerHTML += '<h3>Septinta užduotis</h3>';
+document.querySelector('.septinta_užduotis').innerHTML += '<h3>Septinta užduotis</h3>';
 
-let el_septinta = document.querySelector('.septinta_uzduotis');
+let el_septinta = document.querySelector('.septinta_užduotis');
 
 el_septinta.innerHTML += '<div class="konteinerisTetis"></div>';
 
@@ -368,13 +368,13 @@ let stringas = 'Pavasarį žydi labai daug medžių';
 
 //console.log(stringo_masyvas[4]);  // duoda 5 zodi(nes nuo 0)
 
-// 1 uzd. (aktorius)
+// 1 užd. (aktorius)
 
-document.querySelector('.appended-text').innerHTML += '<br><hr><div class="pirma-uzduotis bg-light"><h3>2021 - 07 - 26</h3><hr></div>';
+document.querySelector('.appended-text').innerHTML += '<br><hr><div class="pirma-užduotis bg-light"><h3>2021 - 07 - 26</h3><hr></div>';
 
-document.querySelector('.pirma-uzduotis').innerHTML += '<h4 style="color: green;">1 užduotis</h4>';
+document.querySelector('.pirma-užduotis').innerHTML += '<h4 style="color: green;">1 užduotis</h4>';
 
-let aktorius = document.querySelector('.pirma-uzduotis');
+let aktorius = document.querySelector('.pirma-užduotis');
 
 
 let aktVardas = 'Kristina';
@@ -385,25 +385,25 @@ if(aktVardas.length > aktPavarde.length){
   aktorius.innerHTML += `<h4>${aktPavarde}</h4>`;
 }
 
-// 2 uzd. 
-document.querySelector('.appended-text').innerHTML += '<br><div class="antra-uzduotis bg-warning p-2"></div>';
-document.querySelector('.antra-uzduotis').innerHTML += '<h4 style="color: green;">2 užduotis</h4>';
+// 2 užd. 
+document.querySelector('.appended-text').innerHTML += '<br><div class="antra-užduotis bg-warning p-2"></div>';
+document.querySelector('.antra-užduotis').innerHTML += '<h4 style="color: green;">2 užduotis</h4>';
 
 let VARDAS = aktVardas.toUpperCase()
-document.querySelector('.antra-uzduotis').innerHTML += `<h4>${VARDAS} ${aktPavarde}</h4>`;
+document.querySelector('.antra-užduotis').innerHTML += `<h4>${VARDAS} ${aktPavarde}</h4>`;
 
-// 3 uzd. 
-document.querySelector('.appended-text').innerHTML += '<br><div class="trecia-uzduotis"></div>';
-document.querySelector('.trecia-uzduotis').innerHTML += '<h4 style="color: green;">3 užduotis</h4>';
+// 3 užd. 
+document.querySelector('.appended-text').innerHTML += '<br><div class="trecia-užduotis"></div>';
+document.querySelector('.trecia-užduotis').innerHTML += '<h4 style="color: green;">3 užduotis</h4>';
 
 let V_1r = aktVardas.substr(0, 1) + '. ';
 let Pav_1r = aktPavarde.substr(0, 1) + '.';
 
-document.querySelector('.trecia-uzduotis').innerHTML += `<div class="h4">${V_1r}${Pav_1r}</h4>`;
+document.querySelector('.trecia-užduotis').innerHTML += `<div class="h4">${V_1r}${Pav_1r}</h4>`;
 
-// 4 uzd. 
-document.querySelector('.appended-text').innerHTML += '<br><div class="ketvirta-uzduotis bg-warning p-2"></div>';
-document.querySelector('.ketvirta-uzduotis').innerHTML += '<h4 style="color: green;">4 užduotis</h4>';
+// 4 užd. 
+document.querySelector('.appended-text').innerHTML += '<br><div class="ketvirta-užduotis bg-warning p-2"></div>';
+document.querySelector('.ketvirta-užduotis').innerHTML += '<h4 style="color: green;">4 užduotis</h4>';
 
 let vardo_3pask = aktVardas.slice(Math.max(aktVardas.length -3, 0));
 //console.log(vardo_3pask);
@@ -411,31 +411,31 @@ let vardo_3pask = aktVardas.slice(Math.max(aktVardas.length -3, 0));
 let pav_3pask = aktPavarde.slice(Math.max(aktPavarde.length -3, 0));
 //console.log(Pav_3pask);
 
-document.querySelector('.ketvirta-uzduotis').innerHTML += '<h4>'+vardo_3pask + pav_3pask +'</h4>' ;
+document.querySelector('.ketvirta-užduotis').innerHTML += '<h4>'+vardo_3pask + pav_3pask +'</h4>' ;
 
-// 5 uzd. 
-document.querySelector('.appended-text').innerHTML += '<br><div class="penkta-uzduotis"></div>';
-document.querySelector('.penkta-uzduotis').innerHTML += '<h4 style="color: green;">5 užduotis</h4>';
+// 5 užd. 
+document.querySelector('.appended-text').innerHTML += '<br><div class="penkta-užduotis"></div>';
+document.querySelector('.penkta-užduotis').innerHTML += '<h4 style="color: green;">5 užduotis</h4>';
 
 let strH = 'Once upon a time in hollywood';
 
 let strH_1repl = strH.replace(/o/g,'*');
 
-document.querySelector('.penkta-uzduotis').innerHTML += '<h4 class="H_be_O">'+strH_1repl.replace('O', '*')+'</h4>';
+document.querySelector('.penkta-užduotis').innerHTML += '<h4 class="H_be_O">'+strH_1repl.replace('O', '*')+'</h4>';
 
-// 6 uzd. 
-document.querySelector('.appended-text').innerHTML += '<br><div class="sesta-uzduotis bg-warning p-2"></div>';
-document.querySelector('.sesta-uzduotis').innerHTML += '<h4 style="color: green;">6 užduotis</h4>';
+// 6 užd. 
+document.querySelector('.appended-text').innerHTML += '<br><div class="sesta-užduotis bg-warning p-2"></div>';
+document.querySelector('.sesta-užduotis').innerHTML += '<h4 style="color: green;">6 užduotis</h4>';
 
 //                let str_be_o = document.querySelector('.H_be_O');
 
 var num_matches = (strH.match(/o/gi).length);
 
-document.querySelector('.sesta-uzduotis').innerHTML += '<h4>'+'Masyve "'+ strH + '" yra '+ num_matches + " \"o\" raidės."+ '</h4>' ;
+document.querySelector('.sesta-užduotis').innerHTML += '<h4>'+'Masyve "'+ strH + '" yra '+ num_matches + " \"o\" raidės."+ '</h4>' ;
 
-// 7 uzd.
-document.querySelector('.appended-text').innerHTML += '<br><div class="septinta-uzduotis"></div>';
-document.querySelector('.septinta-uzduotis').innerHTML += '<h4 style="color: green;">7 užduotis</h4>';
+// 7 užd.
+document.querySelector('.appended-text').innerHTML += '<br><div class="septinta-užduotis"></div>';
+document.querySelector('.septinta-užduotis').innerHTML += '<h4 style="color: green;">7 užduotis</h4>';
 
 let str3 = 'An American in Paris';
 let str4 = 'Breakfast at Tiffany\'s';
@@ -448,14 +448,14 @@ sliced4 = str4.replace(/[aeiouy]/ig,'');
 sliced5 = str5.replace(/[aeiouy]/ig,'');
 sliced6 = str6.replace(/[aeiouy]/ig,'');
 
-document.querySelector('.septinta-uzduotis').innerHTML += '<h4>'+str3+ '</br>' + sliced3 + '</h4>';
-document.querySelector('.septinta-uzduotis').innerHTML += '<h4>' + str4+ '</br>' + sliced4 + '</h4>';
-document.querySelector('.septinta-uzduotis').innerHTML += '<h4>' + str5+ '</br>' + sliced5 + '</h4>';
-document.querySelector('.septinta-uzduotis').innerHTML += '<h4>' + str6+ '</br>' + sliced6 + '</h4>';
+document.querySelector('.septinta-užduotis').innerHTML += '<h4>'+str3+ '</br>' + sliced3 + '</h4>';
+document.querySelector('.septinta-užduotis').innerHTML += '<h4>' + str4+ '</br>' + sliced4 + '</h4>';
+document.querySelector('.septinta-užduotis').innerHTML += '<h4>' + str5+ '</br>' + sliced5 + '</h4>';
+document.querySelector('.septinta-užduotis').innerHTML += '<h4>' + str6+ '</br>' + sliced6 + '</h4>';
 
-// 8 uzd.
-document.querySelector('.appended-text').innerHTML += '<br><div class="astunta-uzduotis bg-warning p-2"></div>';
-document.querySelector('.astunta-uzduotis').innerHTML += '<h4 style="color: green;">8 užduotis</h4>';
+// 8 užd.
+document.querySelector('.appended-text').innerHTML += '<br><div class="astunta-užduotis bg-warning p-2"></div>';
+document.querySelector('.astunta-užduotis').innerHTML += '<h4 style="color: green;">8 užduotis</h4>';
 
 // A-stringas:
 let str8a =  "Don't Be a Menace to South Central While Drinking Your Juice in the Hood";
@@ -467,14 +467,14 @@ document.querySelector('.uzd-8bB').innerHTML += '<br><p>B masyvas: (' + str8b + 
 
 // skaidom A stringa (split):
 // let str8a_masyvas = str8a.split(" ");
-// //document.querySelector('.uzd-8a-stulpelis').innerHTML += '<p >'+ str8a_masyvas +  '</p>';
-// document.querySelector('.uzd-8a-stulpelis').innerHTML += '<br><p style="font-weight: 500; text-decoration: underline;">Išskaidytas A masyvas: </p>';
+// //document.querySelector('.užd-8a-stulpelis').innerHTML += '<p >'+ str8a_masyvas +  '</p>';
+// document.querySelector('.užd-8a-stulpelis').innerHTML += '<br><p style="font-weight: 500; text-decoration: underline;">Išskaidytas A masyvas: </p>';
 
 // console.log(str8a_masyvas);
 
 // let iEl8a = '';
 // str8a_masyvas.forEach(naujasAmasyvas);
-// document.querySelector('.uzd-8a-stulpelis').innerHTML += '<div >' +  iEl8a +  '</div>';
+// document.querySelector('.užd-8a-stulpelis').innerHTML += '<div >' +  iEl8a +  '</div>';
 
 // function naujasAmasyvas(value, index, array) {
 //   iEl8a += '<p class="stulpeliu">' + value + '</p>';
@@ -482,13 +482,13 @@ document.querySelector('.uzd-8bB').innerHTML += '<br><p>B masyvas: (' + str8b + 
 
 // // skaidom B stringa (su split):
 // let str8b_masyvas = str8b.split(" ");
-// document.querySelector('.uzd-8b-stulp').innerHTML += '<p >'+ str8b_masyvas +  '</p>';
-// document.querySelector('.uzd-8b-stulp').innerHTML += '<br><p style="font-weight: 500; text-decoration: underline;">Išskaidytas B masyvas: </p>';
+// document.querySelector('.užd-8b-stulp').innerHTML += '<p >'+ str8b_masyvas +  '</p>';
+// document.querySelector('.užd-8b-stulp').innerHTML += '<br><p style="font-weight: 500; text-decoration: underline;">Išskaidytas B masyvas: </p>';
 // console.log(str8b_masyvas);
 
 // let iEl8b = '';
 // str8b_masyvas.forEach(naujasBmasyvas);
-// document.querySelector('.uzd-8b-stulp').innerHTML += '<div >' + iEl8b + '</div>';
+// document.querySelector('.užd-8b-stulp').innerHTML += '<div >' + iEl8b + '</div>';
 
 // function naujasBmasyvas(value, index, array) {
 //   iEl8b += '<p class="stulpeliu">' + value + ' ' + '</p>';
@@ -534,7 +534,7 @@ document.querySelector('.appended-text2').innerHTML += '<p >  </p><br>';
 
 let elementas = headingas('Funkcijos_2021-07-28');
 
-// 1 uzd.
+// 1 užd.
 headingas('Pirma užduotis ', false, elementas);
 
 document.querySelector('.appended-text2').innerHTML += '<p>' + 'Sukurkite funkciją kuri patikrintų' + 
@@ -587,7 +587,7 @@ document.querySelector('.appended-text2').innerHTML += '<p>Antra frazė: '+ antr
 
 document.querySelector('.appended-text2').innerHTML += '<p>'+ stringoIlgis(pirmaFraze, antraFraze) + '</p>  <hr>' ;
 
-//2 uzd.
+//2 užd.
 headingas('Antra užduotis', false, elementas);
 
 document.querySelector('.appended-text2').innerHTML += '<p>Sukurkite funkciją kuri priimtų penkis parametrus ir grąžintų stringą, kuriame x būtų pakeistas kitamaisiais. “Jūs būsite x ir gyvensite x. Susituoksite su x bei turėsite šunį vardu x, o mirsite sulaukę x metų.” Pakartokite funkciją tris kartus su vis kitokiais parametrais.</p>'
@@ -645,7 +645,7 @@ function sakinys(x1, x2, x3, x4, x5) {
   sakinys(pirmasAS, antrasKURgyvenciau, treciasANTRApuse, 
   ketvirtasSUVA, kiek_Gyvenciau) + '</p><hr>' ;
 
-// 3 uzd.
+// 3 užd.
 headingas('Trečia užduotis', false, elementas);
 
 let xAmzius;
@@ -666,7 +666,7 @@ document.querySelector('.appended-text2').innerHTML += '<p>'+ sunsAmzius(5) + '<
 
 //// 2021-07-29 ////
 
-// 4 uzd.
+// 4 užd.
 headingas('Ketvirta užduotis', false, elementas);
 document.querySelector('.appended-text2').innerHTML += '<p>'+ 'Perkelta į dienos viršų (Length Converter)' + '</p>';
 
@@ -686,7 +686,7 @@ document.querySelector('.appended-text2').innerHTML += '<p>'+ 'Perkelta į dieno
 
 headingas('Masyvai_2021-07-29', false, elementas);
 
-// 1 uzd.---------------
+// 1 užd.---------------
 headingas('Pirma užd.', false, elementas);
 
 let naujasMas = [] ;
@@ -706,11 +706,11 @@ function masyvoSkaiciavimas(reiksme, indeksas) {
  //console.log('Indeksas: ' + indeksas + ' Reiksme: ' + reiksme);  //--------------
 }
 
-// 2 uzd. -------------------
+// 2 užd. -------------------
 headingas('Antra užd.', false, elementas);
 
 // a)------------
-function masyvoUzd_a(reiksme, indeksas) {
+function masyvoužd_a(reiksme, indeksas) {
 
   let counterMas=0;
 
@@ -723,7 +723,7 @@ function masyvoUzd_a(reiksme, indeksas) {
   return counterMas;  
 }
 
-DidesniuUz_10 = masyvoUzd_a(naujasMas);
+DidesniuUz_10 = masyvoužd_a(naujasMas);
 //console.log(DidesniuUz_10);   //--------------
 
 document.querySelector('.appended-text2').innerHTML += '<p>'+'a) Didesnių už 10 skaičių yra '+ DidesniuUz_10 +'</p>';
@@ -842,9 +842,9 @@ document.querySelector('.appended-text2').innerHTML += '<p>'+ tekstinisMasyvas.s
 
 document.querySelector('.appended-text2').innerHTML += '<p>'+ tekstinisMasyvas.reverse() +'</p>';
 
-headingas('1 uzduotis', false, elementas);
+headingas('1 užduotis', false, elementas);
 
-// 1 uzd.
+// 1 užd.
 //Sugeneruokite masyvą, kurio reikšmės atsitiktinės raidės A, B, C ir D, o ilgis 200. Suskaičiuokite kiek yra kiekvienos raidės.
 
 raides = 'ABCD';
@@ -875,31 +875,19 @@ for ( var i = 0; i < 200; i++ ) {
 //console.log(randomraidesMas);
 document.querySelector('.appended-text2').innerHTML += '<p style= "overflow-wrap: break-word;">'+ randomraidesMas +'</p>';
 
-
-// for ( var i = 0; i < 200; i++ ) {
-//   if(randomraidesMas[i] == 'A') 
-//     countA++;
-//   if(randomraidesMas[i] == 'B')
-//     countB++;
-//   if(randomraidesMas[i] == 'C')
-//     countC++;
-//   if(randomraidesMas[i] == 'D')
-//     countD++;
-// }
-
 document.querySelector('.appended-text2').innerHTML += '<p>'+ 'A raidžių ' + countA +';<br></p>';
 document.querySelector('.appended-text2').innerHTML += '<p>'+ 'B raidžių ' + countB +';<br></p>';
 document.querySelector('.appended-text2').innerHTML += '<p>'+ 'C raidžių ' + countC +';<br></p>';
 document.querySelector('.appended-text2').innerHTML += '<p>'+ 'D raidžių ' + countD +'.<br></p>';
 
 
-headingas('2 uzduotis', false, elementas);
-//2 uzd.
+headingas('2 užduotis', false, elementas);
+//2 užd.
 //Išrūšiuokite pirmo uždavinio masyvą pagal abecėlę.
 document.querySelector('.appended-text2').innerHTML += '<p style= "overflow-wrap: break-word;">'+ randomraidesMas.sort() +'</p>';
 
-headingas('3 uzduotis', false, elementas);
-//3 uzd.
+headingas('3 užduotis', false, elementas);
+//3 užd.
 //Sugeneruokite du masyvus, kurių reikšmės yra atsitiktiniai skaičiai nuo 100 iki 999. Masyvų ilgiai 100. 
 //Masyvų reikšmės turi būti unikalios savo masyve (t.y. neturi kartotis).
 
@@ -932,4 +920,164 @@ while(newRandomArray_1.length < 100) {
   document.querySelector('.appended-text2').innerHTML += '<p style= "overflow-wrap: break-word;"> Antras 100 elementų masyvas: </br>'+ newRandomArray_2 + ' (ilgis - '+ newRandomArray_2.length +  ')</p>';
 
   
+  headingas('4 užduotis', false, elementas);
+//4 užd.
+//Sugeneruokite masyvą, kuris būtų sudarytas iš reikšmių, kurios yra pirmame 3 uždavinio masyve, 
+//bet nėra antrame 3 uždavinio masyve.
+
+let Mas4uzd = [];
+
+for (let i=0; i<100; i++) {
+  if(!newRandomArray_2.includes(newRandomArray_1[i])){
+    Mas4uzd.push(newRandomArray_1[i])
+  }
+  //console.log(Mas4uzd)
+}
+
+document.querySelector('.appended-text2').innerHTML += '<p style= "overflow-wrap: break-word;">' + Mas4uzd +  ' ('+ Mas4uzd.length +  ' elementai)</p>';
   
+headingas('5 užduotis', false, elementas);
+//5 užd.
+//Sugeneruokite masyvą iš elementų, kurie kartojasi abiejuose 3 uždavinio masyvuose.
+
+let Mas5uzd = [];
+
+for (let i=0; i<100; i++) {
+  if(newRandomArray_2.includes(newRandomArray_1[i])){
+    Mas5uzd.push(newRandomArray_1[i])
+  }
+  //console.log(Mas5uzd)
+}
+
+document.querySelector('.appended-text2').innerHTML += '<p style= "overflow-wrap: break-word;">' + Mas5uzd +  ' ('+ Mas5uzd.length +  ' elementai)</p>';
+
+let Mas_6uzd = [];
+
+headingas('6 užduotis', false, elementas);
+//6 užd.
+
+let Mas_7uzd = [];
+
+Mas_7uzd.push(randomSkaicius(5, 25));
+Mas_7uzd.push(randomSkaicius(5, 25))
+
+document.querySelector('.appended-text2').innerHTML += '<p>'+ Mas_7uzd + ' (du random skaiciai)'+'</p>';
+
+//console.log(Mas_7uzd + ' (du random skaiciai)');
+
+  for (let i=2; i<10; i++) {  
+  
+    Mas_7uzd.push(
+      Mas_7uzd[i-2]+Mas_7uzd[i-1]
+    );
+    
+  }
+
+document.querySelector('.appended-text2').innerHTML += '<p>'+ Mas_7uzd +'</p>';
+
+//console.log(Mas_7uzd + '__test7');
+
+//Beno kodas (6 uzduoties)
+let unique6 = [];
+
+for(i=0; i<10; i++){
+
+  let index1_2=randomSkaicius(5,25);
+
+  if(i<=1){
+
+    unique6.push(index1_2);
+  }
+  else{
+
+    unique6.push(unique6[i-2]+unique6[i-1]);
+  }
+}
+
+//console.log(unique6)
+
+document.querySelector('.appended-text2').innerHTML +=  `<h3>6th exercise (Beno kodas)</h3>  ${unique6}`;
+
+headingas('2021-08-03', false, elementas);
+//2021-08-03 ----------------------
+
+headingas('Objektai', false, elementas);
+// ----------------------------------------
+let newObArray_1 = [];
+let newObArray_2 = [];
+let uniqueNumber2 = 0;
+
+while(newObArray_1.length < 10) {    
+
+  let uniqueNumber2 = randomSkaicius(100, 999);
+  
+    if(!newObArray_1.includes(uniqueNumber2)) {
+
+      newObArray_1.push(uniqueNumber2);      
+  }
+}
+while(newObArray_2.length < 10) {    
+
+  let uniqueNumber2 = randomSkaicius(100, 999);
+  
+    if(!newObArray_2.includes(uniqueNumber2)) {
+
+      newObArray_2.push(uniqueNumber2);      
+  }
+}
+
+document.querySelector('.appended-text2').innerHTML +=  '<p>' + 'Mas objektams 1: '+ newObArray_1 +'</p>';
+document.querySelector('.appended-text2').innerHTML +=  '<p>' + 'Mas objektams 2: '+ newObArray_2 +'</p>';
+
+let objektoMas = {};
+
+for(let i=0; i < newObArray_1.length; i++){
+  objektoMas[newObArray_1[i]] = newObArray_2[i];
+}
+//console.log(objektoMas);
+
+for(let indeksas in objektoMas) {
+  document.querySelector('.appended-text2').innerHTML +=  '<p>'+ 'Indeksas = ' 
+  + indeksas + ',  reiksme ='+ objektoMas[indeksas]+'<br><p>';
+}
+
+headingas('1 užduotis', false, elementas);
+// 1 užduotis (08-03)-----------------------------------
+
+let OBJEKTAS_1 = {};
+
+let RaidesN = 'ABCDEFGHIJKLMNOPRSTUVWXYZ'; 
+
+let raidesRandom = [];
+let SkaiciaiRandom = [];
+
+for (let i=0; i<10; i++){
+
+  for ( i=0; i<10; i++){    
+    
+    randomRaides = RaidesN.charAt(Math.random()*RaidesN.length); 
+    raidesRandom.push(randomRaides);         
+  }   
+  console.log('raides: '+ raidesRandom);  
+
+  for ( i=0; i<10; i++){
+    
+    RandomSkaicius2 = randomSkaicius(55, 5555);  
+    SkaiciaiRandom.push(RandomSkaicius2);  
+  }  
+
+  console.log('skaiciai: '+SkaiciaiRandom);
+    
+  for( i=0; i < 10; i++){
+    OBJEKTAS_1[raidesRandom[i]] = SkaiciaiRandom[i];
+  }  
+  
+  console.log(OBJEKTAS_1);
+
+  for(let indeksas in OBJEKTAS_1) {
+    document.querySelector('.appended-text2').innerHTML +=  
+    '<p>'+ [i] + ': '+ OBJEKTAS_1 + '<br><p>';
+  }
+}
+
+

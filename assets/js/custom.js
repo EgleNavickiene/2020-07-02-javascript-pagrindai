@@ -153,7 +153,7 @@ for(let indeksas in duomenys) {
         jQuery(duomenys).each(function(indeksas, reiksme){
        
           jQuery(reiksme).each(function(indeksas, reiksme) {
-           // console.log(reiksme['miestas']);
+           //console.log(reiksme['miestas'+' - testas']);
           });
           
         });
