@@ -35,7 +35,36 @@ function atnaujinti() {
     location.reload();
 
 }
-// ----------------------------------------------
+// -----------------------------------------------
+function LengthConverter(valNum) {
+    document.getElementById("outputKm").innerHTML=valNum*1.609344;
+  }
+
+//----------------------------------------------
+
+function zodziuTikrinimas(phrase, ilgis) {
+  
+    let frazes_masyvas = phrase.split(' ');
+    
+    let zodziuCounteris = 0;  
+  
+    for(let i=0; i < frazes_masyvas.length; i++) {
+  
+      tarpAts += '<p>' +frazes_masyvas[i].length + ' ' + frazes_masyvas[i] + '</p>';
+  
+        if(frazes_masyvas[i].length <= ilgis)            
+          zodziuCounteris++;
+      }
+        return zodziuCounteris;
+  }
+  //-----------------------------------------
+
+  function masyvoSkaiciavimas(reiksme, indeksas) {
+    //console.log('Indeksas: ' + indeksas + ' Reiksme: ' + reiksme);  //--------------
+   }
+
+
+
 
 
 
@@ -66,4 +95,93 @@ function headingas(uzduotis, tema = false, tevinis = '.appended-text2') {
     return '.' + child.className;
 
 }
+
+// RANDOM RAIDĖS funkcija  randomString  -------------------------
+
+function randomString(length) {
+
+    let randomraides = '';
+    let raides = 'abcdefghijklmnopqrstuvwxyz';
+
+    for ( let i = 0; i < length; i++ ) {
+
+        randomraides += raides.charAt( Math.floor( Math.random() * raides.length) );
+
+    }
+
+    return randomraides;
+
+}
+
+//-------------randomSkaicius
+function randomSkaicius(min, max) { 
+    return Math.floor(Math.random() * (max - min + 1) + min)
+  };
+
+//-----------regenerateRandomNumber
+  function regenerateRandomNumber(masyvas = [], x, y) {
+
+    for (let i=0; i<=masyvas.length; i++) {
+      let skaicius = randomSkaicius(x, y);
+  
+      if(masyvas.includes(skaicius));
+      return skaicius;
+    }
+  }
+
+// kas antras indeksas masyve (užduotis: Suskaičiuokite visų porinių (lyginių) indeksų reikšmių sumą ) ------------------
+// let evenMas = [];
+// let sum = 0;
+
+// for(var i = 2; i < naujasMas.length; i += 2) {  // take every second element
+//                                         //// --- tinka ir nelyginiams, tik var i = 1 (o ne 2)
+//   evenMas.push(naujasMas[i]);
+//   sum += naujasMas[i];  
+// }
+// document.querySelector('.appended-text2').innerHTML += '<p>'+'c) Lyginius indeksus turintys elementai: '+ evenMas + '<br> Jų suma:' + sum + '</p>';
+//console.log(sum);   
+
+// let OBJEKTAS_2 = {};
+
+// for ( let i = 0; i < 15; i++ ) {
+
+//     let randomraides = randomString(5); // čia naudojam RANDOM RAIDĖS funkciją
+//     let randomskaicius = randomSkaicius(55, 5555);
+
+//     OBJEKTAS_2[randomraides] = randomskaicius;
+// }
+
+//console.log(OBJEKTAS_2);
+//---------------------------------- RANDOM RAIDES string funkcijo pabaiga
+
+
+function switchFunkcija(get) {
+
+    let grazinimas = '';
+    
+    switch(get) {
+
+        case 'pirmas': 
+            grazinimas = 'Rezultatas yra pirmas';
+        break;
+
+        case 'antras': 
+            grazinimas = 'Rezultatas yra antras';
+        break;
+
+        case 'trecias': 
+            grazinimas = 'Rezultatas yra trecias';
+        break;
+
+        default:
+            grazinimas = 'Parametras nepaduotas';
+ 
+    }
+    return grazinimas;
+}
+
+console.log(switchFunkcija(''));
+
+//-----------------------------------------------------------
+
 

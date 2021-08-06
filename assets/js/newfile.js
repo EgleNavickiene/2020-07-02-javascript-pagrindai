@@ -465,37 +465,7 @@ document.querySelector('.uzd-8aA').innerHTML += '<br><p>A masyvas: (' + str8a + 
 let str8b = "Tik nereikia gąsdinti Pietų Centro, geriant sultis pas save kvartale";
 document.querySelector('.uzd-8bB').innerHTML += '<br><p>B masyvas: (' + str8b + ') ' + '</p>';
 
-// skaidom A stringa (split):
-// let str8a_masyvas = str8a.split(" ");
-// //document.querySelector('.užd-8a-stulpelis').innerHTML += '<p >'+ str8a_masyvas +  '</p>';
-// document.querySelector('.užd-8a-stulpelis').innerHTML += '<br><p style="font-weight: 500; text-decoration: underline;">Išskaidytas A masyvas: </p>';
 
-// console.log(str8a_masyvas);
-
-// let iEl8a = '';
-// str8a_masyvas.forEach(naujasAmasyvas);
-// document.querySelector('.užd-8a-stulpelis').innerHTML += '<div >' +  iEl8a +  '</div>';
-
-// function naujasAmasyvas(value, index, array) {
-//   iEl8a += '<p class="stulpeliu">' + value + '</p>';
-// }
-
-// // skaidom B stringa (su split):
-// let str8b_masyvas = str8b.split(" ");
-// document.querySelector('.užd-8b-stulp').innerHTML += '<p >'+ str8b_masyvas +  '</p>';
-// document.querySelector('.užd-8b-stulp').innerHTML += '<br><p style="font-weight: 500; text-decoration: underline;">Išskaidytas B masyvas: </p>';
-// console.log(str8b_masyvas);
-
-// let iEl8b = '';
-// str8b_masyvas.forEach(naujasBmasyvas);
-// document.querySelector('.užd-8b-stulp').innerHTML += '<div >' + iEl8b + '</div>';
-
-// function naujasBmasyvas(value, index, array) {
-//   iEl8b += '<p class="stulpeliu">' + value + ' ' + '</p>';
-// } 
-
-// Turim 2 naujus masyvus su atskirais elementais-zodziais
-//o kaip toliau???
 
 let fraze1 = "Don't Be a Menace to South Central Whe Drinkingil Your Juice in the Hood";
 let fraze2 = "Tik nereikia gąsdinti Pietų Centro, geriant sultis pas save kvartale";
@@ -686,7 +656,7 @@ document.querySelector('.appended-text2').innerHTML += '<p>'+ 'Perkelta į dieno
 
 headingas('Masyvai_2021-07-29', false, elementas);
 
-// 1 užd.---------------
+// 1 užd.--------------------------------------------------
 headingas('Pirma užd.', false, elementas);
 
 let naujasMas = [] ;
@@ -1050,7 +1020,7 @@ let RaidesN = 'ABCDEFGHIJKLMNOPRSTUVWXYZ';
 
 // let SkaiciaiRandom = [];
 
-for (let i=0; i<100; i++){
+for (let i=0; i<20; i++){
 
   let raidesRandom = '';
 
@@ -1066,7 +1036,174 @@ for (let i=0; i<100; i++){
   document.querySelector('.appended-text2').innerHTML +=  '<p>'+ raidesRandom +' ' + OBJEKTAS_1[raidesRandom] +'<br><p>';
 }
 
-console.log(OBJEKTAS_1);
+//console.log(OBJEKTAS_1);
+
+// su funkcija RANDOM RAIDŽIŲ randomString funkcija (funkcija kitame faile: funkcijos.js, 70 eil.-------------------------
+
+let OBJEKTAS_2 = {};
+
+for ( let i = 0; i < 15; i++ ) {
+
+    let randomraides = randomString(5);
+    let randomskaicius = randomSkaicius(55, 5555);
+
+    OBJEKTAS_2[randomraides] = randomskaicius;
+}
+
+//console.log(OBJEKTAS_2);
+
+headingas('2021-08-04', false, elementas);
+//-------------------------------2021-08-04 ----------------------
+
+headingas('2 užduotis', false, elementas);
+// ---------------------------------------
+
+let Arr0804_2uzd = [];
+
+for (let i = 0; i < 25; i++) {
+  Arr0804_2uzd.push(randomSkaicius(5, 555));
+  
+}
+document.querySelector('.appended-text2').innerHTML += '<p>'+Arr0804_2uzd+'</p>';
+
+for(let indeksas in Arr0804_2uzd) {
+  document.querySelector('.appended-text2').innerHTML +=  '<p>'+ 'Indeksas = ' 
+  + indeksas + ',  reikšmė ='+ Arr0804_2uzd[indeksas]+'<br><p>';
+}
+
+
+for(var i = 0; i < Arr0804_2uzd.length; i += 2) {  // take every second element
+
+  delete Arr0804_2uzd[i];
+
+} 
+//console.log(Arr0804_2uzd) 
+document.querySelector('.appended-text2').innerHTML += '<p>'+'Nutrintos por.ind. reikšmės: '+'<br>'+Arr0804_2uzd+'</p>';  
+
+headingas('3 užduotis', false, elementas);
+// ---------------------------------------
+// 3 uzd.
+//Sugeneruokite 101 elemento masyvą su atsitiktiniais skaičiais nuo 0 iki 300. 
+//Reikšmes kurios tame masyve yra ne unikalios pergeneruokite iš naujo taip, kad visos reikšmės masyve 
+//būtų unikalios. Išrūšiuokite masyvą taip, kad jo didžiausia reikšmė būtų masyvo viduryje, o einant nuo 
+//jos link masyvo pradžios ir pabaigos reikšmės mažėtų.
+
+
+
+let Arr101_3uzd = [];
+
+for (let i=0; i < 10; i++) {
+
+  Arr101_3uzd.push(regenerateRandomNumber(Arr101_3uzd, 0, 300));
+  //console.log(Arr101_3uzd);
+}
+
+document.querySelector('.appended-text2').innerHTML += '<p>'+  Arr101_3uzd +'</p>';
+
+headingas('2021-08-05', false, elementas);
+//-------------------------------2021-08-05 ----------------------
+
+headingas('1 vakar dienos užduotis (kitas sprendimo būdas)', false, elementas);
+// ---------------------------------------
+
+
+function randomString(length) {
+
+  let randomraides = '';
+  let raides = 'ABCDEFGHIJKLMNOPRSTUVWXYZ';
+
+  for (let i=0; i < length; i++) {
+
+    randomraides += raides.charAt( Math.floor(Math.random() *raides.length));
+  }
+  return randomraides;
+}
+
+let OBJ_0805 = {};
+
+for(let i=0; i<10; i++) {
+
+  let random_skaicius = randomSkaicius(55, 555);
+  let random_fraze = randomString(5);
+
+  OBJ_0805[random_fraze] = random_skaicius;
+}
+
+//console.log(OBJ_0805);
+document.querySelector('.appended-text2').innerHTML += OBJ_0805;
+
+//----------------------------------------
+headingas('(Lentelė iš naujo)', false, elementas);
+// ---------------------------------------
+
+document.querySelector('.appended-text2').innerHTML += 
+'<table id="paskutine_lentele" class="Xlentele">' +
+  '<thead>' + 
+    '<th>Miestas</th>' +
+    '<th>Adresas</th>' +
+    '<th>Prekių likutis</th>' +
+  '</thead>' + 
+  '<tbody>' + 
+  '</tbody>' +
+'</table>';
+
+let paskutine_lentele = document.querySelector('#paskutine_lentele > tbody');
+
+let masyvas0805 = [
+  {
+      miestas: 'Kaunas',
+      adresas: 'Jonavos 56',
+      likutis: 4
+  },
+  {
+      miestas: 'Vilnius',
+      adresas: 'Geležinio Vilko 37',
+      likutis: 4
+  }
+];
+
+for(let i = 0; i < 5; i++) {
+
+  let objektas = {
+      miestas: randomString(15),
+      adresas: randomString(25),
+      likutis: randomSkaicius(1, 129)
+  }
+
+  masyvas0805.push(objektas);
+} 
+
+for(let i = 0; i < masyvas0805.length; i++) {
+  paskutine_lentele.innerHTML += '<tr><td>' + masyvas0805[i]['miestas'] + '</td>' +
+                                  '<td>' + masyvas0805[i]['adresas'] + '</td>' +
+                                  '<td>' + masyvas0805[i]['likutis'] + '</td>';
+}
+
+//----------------------------------------
+headingas('(2021-08-06)', false, elementas);
+// ---------------------------------------
+headingas('(5 užduotis)', false, elementas);
+
+let uzdNr5_mas = [];
+
+uzdNr5_mas[0]=randomSkaicius(1000, 9999);
+uzdNr5_mas[1]=randomSkaicius(1000, 9999);
+uzdNr5_mas[2]=randomSkaicius(1000, 9999);
+uzdNr5_mas[3]=randomSkaicius(1000, 9999);
+uzdNr5_mas[4]=randomSkaicius(1000, 9999);
+uzdNr5_mas[5]=randomSkaicius(1000, 9999);
+
+uzdNr5_mas.push();
+  console.log(uzdNr5_mas);
+
+uzdNr5_mas.sort()
+uzdNr5_mas.reverse()
+
+document.querySelector('.appended-text2').innerHTML += uzdNr5_mas[0]+' '+uzdNr5_mas[1]+
+' '+uzdNr5_mas[2]+' '+uzdNr5_mas[3]+' '+uzdNr5_mas[4]+' '+uzdNr5_mas[5];
+
+
+
 
 
 
